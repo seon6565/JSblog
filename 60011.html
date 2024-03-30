@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MariaDB</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>12. 트리거, 시그널, 저장함수</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>트리거, 시그널, 저장함수</b></h2>
+            <p><b>TRIGGER</b> 특정 상황 발생 시 행위를 함
+            <br>전역변수 X 지역변수만, prepare 사용 불가, 결과 셋 반환X, 외래키 작업에 의해서는 활성화 X</p>
+            <p><b>Create Trigger trg_name before,After insert,delete,update on table이름 for each row Begin end; </b> </p>
+            <p><b>트리거 임시 테이블 New, old</b> </p>
+            <p><b>New.칼럼명</b> insert,update시 새로운 행이 임시로 저장됨</p>
+            <p><b>old.칼럼명</b> delete,update시 기존행이 임시로 저장됨</p>
+            <p><b>SIGNAL</b> DIAGNOTICS의 값을 SET으로 사용자가 내용 지정</p>
+            <p><b>IF 조건 THEN SIGNAL SQLSTATE '90000' SET MESSAGE_TEXT='오류'</b> </p>
+            <p><b>저장함수(Stored Functions)</b> 단답형만 리턴</p>
+            <p><b>Create Function FN_TEST(매개변수val int....) returns 데이터타입 No SQL Not DETERMINISTIC
+            <br>begin return val+val; end </b>
+            <br>*No SQL = CRUD(insert,delete,update,select)없으면, Not Deterministic = 같은 상황 다른 값 now()같은 것이 있으면
+            <br>*결과셋을 반환하는 명령문 허용X</p>
+            <p><b>select fn_test(10);</b> select으로 값 조회</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

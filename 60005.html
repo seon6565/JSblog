@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MariaDB</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>6. 내장 함수2</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>내장 함수2</b></h2>
+            <p><b>CASE 칼럼or값 WHEN '조건' THEN '조건일경우값' ..... ELSE '값'</b> </p>
+            <p><b>DECODE_ORACLE(칼럼or값,'',''.....'') </b> 쌍으로 구성되므로 주의</p>
+            <p><b>IF(조건, 값1, 값2)</b> </p>
+            <p><b>IFNULL(값1,값2)=NVL()</b> 값1이 NULL이면 값2 반환</p>
+            <p><b>NULLIF(값1,값2)</b> 값1=값2면 NULL, 다르면 값1 반환</p>
+            <p><b>NVL2(값1,값2,값3)</b> 값1이 NULL이면 값3, NULL이아니면 값2</p>
+            <p><b>ROWNUM()</b> 결과 테이블에 행 번호를 추가(행번호가 부여된 후 ORDER BY가 이루어짐)</p>
+            <p><b>ROW_COUNT()</b> INSERT, DELETE, UPDATE에 영향받은 ROW의 수</p>
+            <p><b>LAST_INSERT_ID()</b> AUTO_INCREMENT의 마지막 추가된 값 반환</p>
+            <p><b>USER()=CURRENT_USER()</b> 데이터베이스 사용자아이디 반환</p>
+            <p><b>DATABASE()</b> 현재 사용중인 데이터베이스 이름 반환</p>
+            <p><b>VERSION()</b> 데이터 베이스 시스템의 버전 반환</p>
+            <p><b>JSON_OBJECT('KEY1',칼럼,'KEY2',칼럼2......) FROM 테이블명 </b> JSON OBJECT로 보여줌</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

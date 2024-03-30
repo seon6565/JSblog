@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSP</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>2. 지시어의 속성</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>지시어의 속성</b></h2>
+            <p><b>page지시어 속성</b></p>
+            <p><b>language="java"</b> </p>
+            <p><b>contentType="text/html; charset=UTF-8"</b> </p>
+            <p><b>pageEncoding="UTF-8"</b> </p>
+            <p><b>import="java.util.*"</b> </p>
+            <p><b>trimDirectiveWhiteSpaces="true"</b> 지시어로 인한 HTML의 공백 제거</p>
+            <p><b>isErrorPage="true"</b> true일 경우 지정된 에러페이지</p>
+            <p><b>errorPage="에러페이지주소"</b> 에러페이지주소를 에러페이지로 지정</p>
+            <p><b>buffer="none"</b> 기본값 8kb</p>
+            <p><b>AutoFlush="true"</b> 기본값 true</p>
+            <p><b>include지시어 속성</b> </p>
+            <p><b>file="include할파일"</b> </p>
+            <p><b>tablib 속성</b> </p>
+            <p><b></b> </p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSP</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>7. 쿠키</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>쿠키</b></h2>
+            <p><b>1. 3000개 까지 만들 수 있음</b> </p>
+            <p><b>2. 쿠키 하나의 최대 크기는 4096BYTE</b> </p>
+            <p><b>3. 하나의 호스트나 도메인에서 최대 50개까지 가능(브라우저 마다 다름)</b> </p>
+            <p><b>new Cookie("쿠키이름","값")</b> </p>
+            <p><b>.setValue("값")</b> 값 설정</p>
+            <p><b>.setDomain("값")</b> 도메인 설정</p>
+            <p><b>.setPath("값")</b> 쿠키의 경로 설정</p>
+            <p><b>.setMaxAge(초단위)</b> 쿠키의 지속시간 설정</p>
+            <p><b>.getName()</b> </p>
+            <p><b>.getValue()</b> </p>
+            <p><b>.getDomain()</b> </p>
+            <p><b>.getPath()</b> </p>
+            <p><b>.getMaxAge()</b> </p>
+            <p><b>response.addCookie("쿠키인스턴스이름")</b> 생성한 쿠키를 response객체에 추가</p>
+            <p><b>request.getCookies();</b> 사용자의 쿠키리스트의 쿠키이름 배열을 받아옴</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

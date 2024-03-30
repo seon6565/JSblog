@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MariaDB</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>11. 트랜잭션, 커서, 저장 프로시저</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>트랜잭션, 커서, 저장 프로시저</b></h2>
+            <p><b>트랜잭션</b> 한꺼번에 수행되야 할 쿼리문의 묶음(동시성 보장, 무결성)</p>
+            <p><b>Atomicity(원자성)</b> 쪼갤수 없는 최소 단위로 이뤄져야함.</p>
+            <p><b>Consistency(일관성)</b> 제약이 보장 되야함.</p>
+            <p><b>Isolation(독립성)</b> 다른 트랜잭션에 영향을 받으면 안됨</p>
+            <p><b>Durability(지속성)</b> 결과가 저장되어 지속적이여야함.</p>
+            <p><b>START TRANSACTION; COMMIT; ROLLBACK;</b> </p>
+            <p><b>커서</b> 데이터베이스 조회할때 위치(커서)를 의미</p>
+            <p><b>DECLARE 커서명 CURSOR FOR SELECT문;</b> </p>
+            <p><b>DECLARE CONTINUE HANDLER FOR NOT FOUND SET CHECK = 'Y';</b> </p>
+            <p><b>OPEN CURS;</b> </p>
+            <p><b>FETCH CURS INTO 변수;</b> </p>
+            <p><b>CLOSE CURS;</b> </p>
+            <p><b>저장 프로시저</b> </p>
+            <p><b>DELIMITER $$ CREATE[ OR REPLACE] PROCEDURE 프로시저명([IN,OUT]) BEGIN END $$ DELIMITER ;</b> *저장 프로시저에서는 NOT ATOMIC 안해도 됨</p>
+            <p><b>CALL 프로시저명(매개변수)</b> </p>
+            <p><b>DROP PROCEDURE 프로시저이름</b> </p>
+            <p><b>SHOW PROCEDURE STATUS</b> 프로시저 어느DB,이름,TYPE 등 조회(내용은 미포함)</p>
+            <p><b>SELECT * FROM INFORMATION_SCHEMA.ROUTINES</b> TYPE PROCEDURE에서 내용 포함해서 조회 가능</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

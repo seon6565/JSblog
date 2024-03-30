@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>4. Java String</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>Java String</b></h2>
+            <p><b>String 변수명 = new String("문자열")</b> new String 생략가능 </p>
+            <p><b>특징 1</b> 객체 안의 값을 변경하면 새로운 객체를 생성</p>
+            <p><b>특징 2</b> 리터럴을 바로 입력한 경우 문자열이 같을 때 하나의 객체를 공유</p>
+            <p><b>length()</b> 문자열의 길이</p>
+            <p><b>charAt()</b> 인덱스 위치에서의 문자</p>
+            <p><b>indexOf()</b> 첫번째 문자열의 위치 (없을 경우 -1)</p>
+            <p><b>lastIndexOf()</b> 뒤에서 첫번째 문자열의 위치 (없을 경우 -1)</p>
+            <p><b>.valueOf()</b> 문자열로 변환하기 위한 메서드</p>
+            <p><b>concat()</b> 문자열 연결</p>
+            <p><b>getBytes()</b> 문자열을 byte[]로 변환</p>
+            <p><b>toCharArray()</b> 문자열을 char[]로 변환</p>
+            <p><b>toLowerCase()</b> 영문 문자를 모두 소문자로 변환</p>
+            <p><b>toUpperCase()</b> 영문 문자를 모두 대문자로 변환</p>
+            <p><b>replace()</b> 문자열을 , 문자열로 대체한 문자열 생성</p>
+            <p><b>substring()</b> beginIndex부터 endIndex-1 위치까지의 문자열 생성</p>
+            <p><b>split()</b> 조건에 맞춰서 문자열을 분할한 배열을 생성</p>
+            <p><b>trim()</b> 문자열 앞 뒤 공백 제거</p>
+            <p><b>equals()</b> 문자열의 실제 내용 비교</p>
+            <p><b>equalsIgnoreCase()</b> 대소문자 구분 없이 실제 내용 비교</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

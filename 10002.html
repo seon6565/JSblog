@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>3. 다양한 태그 알아보기 1</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>다양한 태그 알아보기 1 </b></h2>
+            <p><b> &lth1&gt</b>는 제목 태그로 h1~h6까지 사용가능하며 크기가 작아집니다.
+            <p><b> &ltp&gt</b>는 텍스트 단락 태그로 내용이 길면 웹 브라우저 창의 너비에 맞게 자동으로 줄 바꿈을 합니다.
+            <p><b> &ltbr&gt</b>는 줄 바꿈 태그로 텍스트 단락 중 원하는 위치에서 줄 바꿉니다.
+            <p><b> &ltstrong&gt</b>는 텍스트를 굵게 표시해 줍니다. <strong>태그적용</strong>
+            <p><b> &ltb&gt</b>는 텍스트를 굵게 표시해 줍니다. <b>태그적용</b>
+            <p><b> &ltem&gt</b>는 텍스트를 기울게 표시해 줍니다. <em>태그적용</em>
+            <p><b> &lti&gt</b>는 텍스트를 기울게 표시해 줍니다. <em>태그적용</em>
+            <p><b> &ltsup&gt</b>는 위 첨자를 표시해줍니다. <sup>태그적용</sup>
+            <p><b> &ltsub&gt</b>는 아래 첨자를 표시해줍니다. <sub>태그적용</sub>
+            
+
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

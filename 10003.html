@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>4. 다양한 태그 알아보기 2</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>다양한 태그 알아보기 2 </b></h2>
+            <p><b>&ltol&gt</b>는 순서 있는 목록의 시작과 끝을 나타냅니다.
+            <p><b>&ltul&gt</b>는 순서 없는 목록의 시작과 끝을 나타냅니다.
+            <p><b>&ltli&gt</b>는 &ltol&gt하고 &ltul&gt의 각 항목을 나타냅니다.
+            <p><b>&ltdl&gt</b>는 설명 목록의 시작과 끝을 나타냅니다.
+            <p><b>&ltdd&gt</b>는 설명 목록의 이름(제목)을 나타냅니다.
+            <p><b>&ltdt&gt</b>는 설명 목록의 값(설명)을 나타냅니다.
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+#header{
+    background: url("/img/posts.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+#main{
+    margin: 0px auto;
+    width: 1200px;
+}
+.article{
+    padding: 40px;
+}
+
+button{
+    padding: 10px 10px;
+}
+
+
+#buttonArea{
+    display: grid;
+    width: 1200px;
+    grid-template-columns: 1fr 1fr;
+}
+#left>button{
+    float: left;
+}
+#right>button{
+    float: right;
+}
+.article>img{
+    float: left;
+}

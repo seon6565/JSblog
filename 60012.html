@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MariaDB</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+        #right{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>13. 인덱스, 암호화</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>인덱스(색인), 암호화</b></h2>
+            <p><b>클러스터형 색인</b> Primary key (1개만 허용)</p>
+            <p><b>넌클래스터형 색인</b> 1개이상 생성 가능 (유니크 색인, 넌유니크 색인)</p>
+            <p><b>Create Index 인덱스명 on 테이블명(칼럼)</b> </p>
+            <p><b>Show index from 테이블명</b> </p>
+            <p><b>Show table status like '%aaa%'</b> 테이블 row수 등 분석 정보</p>
+            <p><b>Analyze Table 테이블명</b> 색인통계정보 업데이트 명령</p>
+            <p><b>Explain select * from 테이블명</b> select문 관련 분석 정보</p>
+            <p><b>SHA2('문자열',256)</b> 256비트로 암호화 (복호화 불가)</p>
+            <p><b>HEX(AES_ENcrypt(문자열,대칭키문자열))</b> 16진수로 변환 (깨짐방지) (복호화 가능)</p>
+            <p><b>UNHEX(AES_DEcrypt(암호화된문자열,대칭키문자열))</b> 16진수로 변환된 암호 복호화</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

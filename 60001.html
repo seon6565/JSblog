@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MariaDB</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>2. 데이터베이스 모델링</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>데이터베이스 모델링</b></h2>
+            <p><b>데이터베이스 모델링</b> 현실 세계에서 사용하는 작업이나 사물들을 데이터 베이스 개체로 변환하는 것</p>
+            <p><b>데이터의 무결성(Integrity)</b> 데이터에 대한 정확성, 일관성, 유효성, 신뢰성을 보장하는것</p>
+            <p><b>도메인(domain)</b> 속성 하나가 가질 수 있는 모든 값</p>
+            <p><b>개체(entity)</b> 저장할 만한 가치가 있는 중요 데이터를 가지고 있는 것</p>
+            <p><b>속성(attribute)</b> 개체가 가지고 있는 고유의 특성</p>
+            <p><b>릴레이션(relation)</b> 하나의 개체에 관한 데이터를 2차원 테이블의 구조로 저장한 것</p>
+            <p><b>정규화(Normalization)</b> 데이터의 무결성 문제가 발생하지 않도록 데이터베이스를 설계하는 과정</p>
+            <p><b>기본키(Primary Key)</b> 기본키는 동일한 값이 입력되지 않는다.(Entity Integrity)</p>
+            <p><b>외래키(Foreign Key)</b> 다른 릴레이션의 기본키를 그대로 참조하는 속성의 집합
+            <p><b>제1정규형</b> 모든 속성의 도메인이 원자값으로만 구성, 기본키를 설정하는 과정</p>
+            <p><b>제2정규형</b> 부분 함수 종속을 없애기 위해 테이블을 분리, 외래키 설정 필요</p>
+            <p><b>제3정규형</b> 이행적 함수 종속을 없애기 위해 테이블을 분리, X->Y Y->Z (이행적함수 종속=X->Z)</p>
+            <p><b></b> </p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

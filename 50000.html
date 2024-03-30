@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java1</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+        #left{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>1. Java에 대해서 알아보자.</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>Java에 대해서 알아보자</b></h2>
+            <p><b>자바 개발 도구(Java Development Kit)</b>는 자바를 이용해 프로그램을 개발하는데 필요한 도구를 모아둔 것입니다.</p>
+            <p><b>자바 실행 환경(Java Runtime Environment)</b>는 완성된 프로그램을 실행하는 데 필요한 환경을 말합니다.</p>
+            <p><b>자바 가상 머신(Java Vitual Machine)</b>는 자바를 실행시키기 위한 가상 머신입니다.</p>
+            <p>*JDK의 설치 위치를 변경했을 경우 환경 변수를 별도로 설정해 줘야 합니다.</p>
+            <p><b>.java 소스파일 생성 -> 컴파일 -> .class 바이트 코드 파일 생성 -> 실행 -> .JVM은 메모리 할당 -> 메서드 영역에 클래스 로딩 -> main() 실행</b></p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

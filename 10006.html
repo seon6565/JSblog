@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        h2, p {
+            margin-bottom: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>7. 폼 태그에 대해서 알아보자</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>폼 태그 알아보기 1 </b></h2>
+            <p><b>&ltform&gt</b>는 폼의 시작과 끝을 만듭니다.
+            <p><b>&ltfieldset&gt</b>는 폼 요소를 그룹으로 묶습니다.
+            <p><b>&ltlegend&gt</b>는 &ltfieldset&gt에 제목을 붙입니다.
+            <p><b>&ltinput&gt</b>는 사용자가 내용을 입력할 필드를 삽입합니다. 다양한 type은 다음장에서 확인 가능합니다.
+            <p><b>&ltselect&gt</b>는 드롭 다운 목록을 삽입합니다.
+            <p><b>&ltoption&gt</b>는 &ltselect&gt의 옵션을 삽입합니다.
+            <p><b>&lttextarea&gt</b> 택스트를 여러 줄 입력할 수 있는 텍스트 영역을 삽입합니다.
+            <p><b>&ltdatalist&gt</b> 데이터 목록을 삽입합니다.
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

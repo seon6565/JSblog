@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>11. Java exception</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>Java exception</b></h2>
+            <p><b>exception</b> 개발자가 해결할 수 있는 오류(차선책 선택)</p>
+            <p><b>error</b> 개발자가 해결할 수 없는 오류</p>
+            <p><b>일반 예외(Checked Exception)</b> 컴파일 전에 체크</p>
+            <p><b>실행 예외(Unchecked Exception=Runtime Exception)</b> 실행할 때 체크</p>
+            <p><b>Exception, RuntimeException</b> </p>
+            <p><b>예외 처리</b> </p>
+            <p><b>예외 처리 문법 구조</b> try { 실행 } catch(예외클래스명 참조변수명){ 예외처리 } finally{ 예외여부 상관없이 무조건 실행(생략가능)}</p>
+            <p><b>다중 예외 처리</b> try{} catch(예외1 참조변수명){} catch(예외2 | 예외3 참조변수명){} 작은 범위에서 큰 범위로 작성할 것</p>
+            <p><b>리소스 해제 예외 처리</b> finally 블록의 대표적인 기능은 리소스를 해제하는 것
+            <br>try{} catch(Exception e){} finally{ 자원반납 }</p>
+            <p><b>리소스 자동 해제 예외 처리</b> 
+            <br> try(리소스 자동 해제가 필요한 객체 생성){} catch(예외클래스명 참조변수명){}
+            <br> try(InputStreamReader is = new InputStreamReader(System.in);){ is.read(); } catch(Exception e){ 예외처리 }
+            <br> 해당 InputStreamReader는 AutoCloseable 인터페이스가 구현되어 있어서 자동으로 close()가 호출된다.</p>
+            <p><b>AutoCloseable 인터페이스</b> 리소스 자동 해제 객체는 반드시 close메서드를 포함하고 AutoCloseable 인터페이스를 구현 해야 함</p>
+            <p><b>예외 전가</b> 리턴타입 메서드명() throws 예외클래스명{ }
+            <br>예외를 전가하면 예외 처리의 의무를 호출한 곳으로 전가 된다.(최종적으로는 JVM이 처리함)</p>
+            <p><b>다중 예외 전가</b> 리턴타입 메서드명() throws 예외클래명A,....,예외클래스명D{ }</p>
+            <p><b>printStackTrace()</b> 예외 발생이 전달되는 경로를 한눈에 확인할 수 있는 메서드</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MariaDB</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>3. 데이터 유형</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>데이터 유형</b></h2>
+            <p><b>문자 데이터 유형</b> </p>
+            <p><b>char(문자길이)</b> 고정길이 문자형 (0~255바이트)</p>
+            <p><b>varchar(문자길이)</b> 가변길이 문자형 (0~65535바이트)</p>
+            <p><b>binary(문자길이)</b> 고정길이 이진 데이터 값(0~255바이트)</p>
+            <p><b>varbinary(문자길이)</b> 가변길이 이진 데이터 값(0~255바이트)</p>
+            <p><b>tinytext</b> (0~255바이트) 문자열 저장</p>
+            <p><b>text</b> (0~65,535바이트) 문자열 저장</p>
+            <p><b>mediumtext</b> (0~16,777,215바이트) 문자열 저장</p>
+            <p><b>longtext</b> (0~4GB) 문자열 저장</p>
+            <p><b>blob</b> 대용량의 사진, 동영상 파일을 저장하는데 사용</p>
+            <p><b>날짜 데이터 유형</b> </p>
+            <p><b>date</b> (3바이트) (YYYY-MM-DD) (1000-01-01~9999-12-31)</p>
+            <p><b>time</b> (3바이트) (HH:MM:SS.ssssss) (-838:59:59.999999~838:59:59.999999)</p>
+            <p><b>datetime</b> (8바이트) (YYYY-MM-DD HH:MM:SS.ffffff) (1000-01-01 00:00:00.000000~9999-12-31 23:59:59.999999)</p>
+            <p><b>timestamp</b> (4바이트) (YYYY-MM-DD HH:MM:SS.ffffff) (1970-01-01 00:00:01(UTC)~2038-01-19 03:14:07(UTC))</p>
+            <p><b>year</b> (1바이트) (YYYY) (1901~2155)</p>
+            <p><b>숫자 데이터 유형</b> </p>
+            <p><b>tinyint</b> (1바이트) (-128~127)or(0~255)</p>
+            <p><b>smallint</b> (2바이트) (-32768~32767)or(0~65535)</p>
+            <p><b>mediumint</b> (3바이트)</p>
+            <p><b>int</b> (4바이트)</p>
+            <p><b>bigint</b> (8바이트)</p>
+            <p><b>decimal(M,D), numeric(M,D)</b> (M=1~65) M=전체자릿수, D=소수점아래갯수</p>
+            <p><b>double(M,D)</b> (8바이트) M=전체자릿수, D=소수점아래갯수</p>
+            <p><b>float(M,D)</b> (4바이트) M=전체자릿수, D=소수점아래갯수</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSP0</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+        #left{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>1. JSP에 대해서 알아보자.</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>JSP에 대해서 알아보자</b></h2>
+            <p><b> JSP의 장점</b>
+            <br>짧은 코드로 동적 웹 페이지 생성
+            <br>기본적인 예외 자동처리
+            <br>다양한 확장 라이브러리 사용 가능
+            <br>스레드 기반 시스템 자원 절약</p>
+            <p><b>WAS</b> 웹서버 + 웹컨테이너(서블릿+JSP엔진)</p>
+            <p><b>지시어</b></p>
+            <p><b>&lt% 지시어종류 속성이름="값" 속성이름2="값".... %&gt</b>
+            <br>*지시어 종류: page, include, taglib</p>
+            <p><b>스크립틀릿 요소 </b></p>
+            <p><b>선언부 &lt%! %&gt</b>메서드, 변수를 선언</p>
+            <p><b>스크립틀릿 &lt% %&gt </b>메서드 선언 불가, 선언부와 다르게 실행되는 영역</p>
+            <p><b>표현식 &lt%= %&gt </b>간단하게 HTML로 표현할때 사용</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

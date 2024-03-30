@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MariaDB</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>10. 프로시저</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>프로시저</b></h2>
+            <p><b>@변수명</b> 사용자 정의 변수(전역변수)</p>
+            <p><b>SET @변수명 = 값</b> 값은 단일값만 가능</p>
+            <p><b>SELECT A,B INTO @A,@B FROM ~</b> SELECT 결과의 A,B가 @A와 @B에 값이 저장 됨(단일값이 아닐 경우 에러)</p>
+            <p><b>SELECT * FROM INFORMATION_SCHEMA.USER_VARIABLES</b> 선언한 변수들 조회, 권한이 없으면 조회 불가</p>
+            <p><b>BEGIN NOT ATOMIC ~~~ END</b> </p>
+            <p><b>BEGIN IF @VAR=100 THEN 실행; ELSEIF @VAR=90 THEN 실행; ELSE 실행; END IF; END;</b> </p>
+            <p><b>SET @A = CASE @B WHEN 'A' THEN ? WHEN 'B' THEN ? ELSE 'C' END;</b> @B을 확인하는 CASE문</p>
+            <p><b>SET @A = CASE WHEN @B='A' THEN ? WHEN @B='B' THEN ? ELSE 'C' END;</b> </p>
+            <p><b>WHILE 조건식 DO 실행 END WHILE;</b> </p>
+            <p><b>FOR i IN 초기값..목적값 DO ~ END FOR;</b> i=변수명</p>
+            <p><b>DECLARE I INT DEFAULT 1;</b> 지역변수 선언</p>
+            <p><b>LOOP1: LOOP [실행] 조건 LEAVE LOOP1 [실행] END LOOP LOOP1; </b> 라벨의 LEAVE로 무한루프에서 빠져나옴.</p>
+            <p><b>REPEAT 실행 UNTIL 조건(트루가 될때까지) END REPEAT;</b> 트루가 되면 종료되는 점이 다름</p>
+            <p><b>DECLARE CONTINUE HANDLER FOR 조건값 BEGIN NO ATOMIC 실행1 END;</b> CONTINUE는 실행1 후 나머지 계속 실행</p>
+            <p><b>DECLARE EXIT HANDLER FOR 조건값 BEGIN NO ATOMIC 실행1 END;</b> EXIT는 실행1 후 종료
+            <br>조건값= SQLSTATE '코드', MARIADB_ERROR_CODE, NOT FOUND, SQLWARNING, CONDITION_NAME, SQLEXCEPTION</p>
+            <p><b>DELIMITER $$ BEGIN ~ END $$ DELIMITER ;</b> DELIMITER로 선언한 $$~$$를 한 로직으로 지정, DELIMITER ;을 통해 다시 단위를 $$->;으로 복구</p>
+            <p><b>BEGIN NOT ATOMIC DIAGNOSTICS CONDITION 1 @A = RETURNED_SQLSTATE, @B = MYSQL_ERRNO, @C = MESSAGE_TEXT; END;</b> 
+            <br>에러의 코드와 내역을 조회하는 방법</p>
+            <p><b>PREPARE PRE이름 FROM "SELECT * FROM 테이블 WHERE ID=? AND NAME=?</b> </p>
+            <p><b>EXECUTE PRE이름 USING 2,3</b> USING의 값이 순차적으로 ?위치에 전달 됨</p>
+            <p><b>DROP PREPARE PRE이름, DEALLOCATE PREPARE PRE이름</b> 저장된 PREPARE을 삭제</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

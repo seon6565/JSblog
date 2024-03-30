@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        h2, p {
+            margin-bottom: 10px;
+        }
+        #right{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>5. JavaScript DOM </h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>JavaScript DOM</b></h2>
+            <p><b>요소 노드</b> 모든 HTML 태그를 의미</p>
+            <p><b>텍스트 노드</b> 태그의 텍스트 내용</p>
+            <p><b>속성 노드</b> 태그의 속성</p>
+            <p><b>주석 노드</b> 주석</p>
+            <p><b>getElementById(id)</b> id명으로 접근</p>
+            <p><b>getElementByClassName(class)</b> class명으로 접근하며, 배열로 저장</p>
+            <p><b>getElementByTagName(tag)</b> 태그명으로 접근하며, 배열로 저장</p>
+            <p><b>querySelector()</b> 다양한 방식으로 접근가능</p>
+            <p><b>querySelectorAll()</b> 다양한 방식으로 접근가능(단 하나가 아니라, 배열로 받아와야 할 경우 사용)</p>
+            <p><b>getAttribute(속성)</b> 태그에서 사용한 속성값을 가져옴</p>
+            <p><b>setAttribute(속성, 값)</b> 태그의 속성을 특정한 값으로 지정함</p>
+            <p><b>addEventListener(이벤트, 함수, 캡쳐여부)</b> 요소에 특정 이벤트에 대한 콜백함수</p>
+            <p><b>createElement()</b> 새로운 요소 노드를 만듬</p>
+            <p><b>createTextNode()</b> 새로운 텍스트 노드를 만듬</p>
+            <p><b>createAttribute()</b> 새로운 속성 노드를 만듬</p>
+            <p><b>setAttributeNode()</b> 속성 노드를 요소 노드의 자식으로 연결</p>
+            <p><b>appendChild()</b> 요소 노드를 자식으로 연결</p>
+            <p><b>insertBefore(insertThis,beforeThis)</b> 요소를 해당 위치 앞에 추가(null일 경우 마지막에추가)</p>
+            <p><b>parent.removeChild(child)</b> 부모 노드에서 자식 노드를 삭제</p>
+
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

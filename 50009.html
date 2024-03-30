@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>10. Java inner class, inner interface</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>Java inner class, inner interface</b></h2>
+            <p><b>inner class의 종류</b> 멤버 이너 클래스(인스턴스 멤버 클래스, 정적 멤버 클래스), 지역 이너 클래스(지역 클래스) 
+            <br>*이너 클래스는 아우터클래스$이너클래스.class 파일이 생성된다.</p>
+            <p><b>인스턴스 이너 클래스 생성</b> <br>아우터클래스 아우터클래스참조변수 = new 아우터 클래스();
+            <br>아우터클래스.이너클래스 이너클래스참조변수 = 아우터클래스참조변수.new 이너클래스();</p>
+            <p><b>정적 이너 클래스 생성</b><br> 아우터클래스.이너클래스 이너클래스참조변수 = new 아우터클래스.이너클래스();</p>
+            <p><b>지역 이너 클래스</b> 지역 이너 클래스는 클래스의 멤버가 아닌 메서드 내에서 정의되는 클래스</p>
+            <p><b>지역 이너 클래스 생성</b> 지역이너클래스 지역이너클래스참조변수 = new 지역이너클래스();
+            <br>*지역 변수를 사용할 때는 반드시 final로 선언(컴파일러가 강제로 추가)</p>
+            <p><b>지역 이너 클래스 파일명</b> 아우터클래스$숫자지역이너클래스명.class</p>
+            <p><b>익명 이너 클래스</b> class A { C b = new C() { public void bcd(){ 메서드구현} } };
+            <br>*인터페이스나 추상클래스를 상속받아 구현하는 익명 클래스를 이너 클래스로 만든다고 생각하면 된다.</p>
+            <p><b>inner interface</b> 는 static 이너 인터페이스만 존재할수 있다.</p>
+            <p><b>inner interface 객체 생성 방법</b> </p>
+            <p><b>1. 인터페이스 구현 클래스 생성 및 객체 생성</b> class C implements A.B { public void bcd(){메서드구현} } C c = new C(); c.bcd(); </p>
+            <p><b>2. 익명 이너 클래스 사용 </b> A.B a = new A.B(){ public void bcd() {메서드구현} }; a.bcd();</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

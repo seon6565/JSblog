@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MariaDB</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>8. 집계함수</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>집계함수</b></h2>
+            <p><b>집계함수</b> SUM(), MAX(), MIN(), AVG(), COUNT()
+            <br>집계함수는 GROUP BY로 묶어줘야 묶어준 칼럼의 값 별로 계산됨</p>
+            <p><b>SELECT DISTINCT 집계함수 OVER (PARTITION BY 묶어줄칼럼)</b> GROUP BY와 비슷하며, 중복값을 없애려면 DISTINCT를 해줘야 함</p>
+            <p><b>GROUP BY 1,2,3 WITH ROLLUP</b> 1그룹집계, 2그룹집계, 3그룹집계, 총집계</p>
+            <p><b>CTE(COMMON TABLE EXPRESSION)</b> 쿼리 실행 도중만 존재하는 임시테이블</p>
+            <p><b>순위함수</b></p>
+            <p><b>ROW_NUMBER() OVER (PARTITION BY 칼럼명 ORDER BY 칼럼명 DESC)</b> 동률이 있어도 1,2,3,4,5</p>
+            <p><b>RANK() OVER (PARTITION BY 칼럼명 ORDER BY 칼럼명 DESC)</b> 동률이 있을 경우 1,1,1,4,5</p>
+            <p><b>DENSE_RANK() OVER (PARTITION BY 칼럼명 ORDER BY 칼럼명 DESC)</b> 동률이 있을 경우 1,1,1,2</p>
+            <p><b>NTILE(숫자)</b> 숫자 만큼 그룹으로 묶어줌</p>
+            <p><b>PERCENT_RANK() OVER (PARTITION BY 칼럼명 ORDER BY 칼럼명 DESC)</b> 0부터 그룹 단위로 %로 보여줌</p>
+            <p><b>CUME_DIST() OVER (PARTITION BY 칼럼명 ORDER BY 칼럼명 DESC)</b> 누적으로 그룹 단위로 %로 보여줌(0이 없음)</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

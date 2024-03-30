@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MariaDB</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>7. JOIN</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>JOIN</b></h2>
+            <p><b>SELF JOIN -> INNER JOIN -> OUTER JOIN -> CROSS JOIN </b> 순서로 데이터베이스에 부하가 걸림</p>
+            <p><b>SELECT 칼럼명 FROM 테이블명 JOIN 테이블명2 ON 조인조건</b> JOIN만 명시할 시 INNER JOIN이 됨</p>
+            <p><b>CROSS JOIN</b> 테이블1행 X 테이블2행 으로 합쳐지며 조심해서 사용할 것</p>
+            <p><b>INNER JOIN</b> 조인 조건에 맞는 교집합</p>
+            <p><b>LEFT OUTER JOIN</b> 왼쪽테이블 기준으로 오른쪽 테이블에 해당 값이 없어도 조건에 맞는 왼쪽테이블의 값은 전부 출력(부분집합)
+            <br>*해당하는 값이 없는 것들은 NULL처리</p>
+            <p><b>RIGHT OUTER JOIN</b> 오른쪽테이블 기준으로 왼쪽 테이블에 해당 값이 없어도 조건에 맞는 오른쪽테이블의 값은 전부 출력(부분집합)
+            <br>*해당하는 값이 없는 것들은 NULL처리</p></p>
+            <p><b>OUTTER JOIN의 FROM기준</b> 비즈니스 로직의 메인이 FROM에 오게 구성</p>
+            <p><b>SELF JOIN</b> 자기 자신과 조인 조건으로 TABLE1과 TABLE1을 비교할떄 사용</p>
+            <p><b>NESTED JOIN</b> 다중 조인</p>
+            <p><b>서브쿼리</b> 일반적으로 서브쿼리의 결과값은 1개행 1개열로 구성
+            <br>*서브쿼리에서는 SELECT FROM WHERE만 사용할 것</p>
+            <p><b>WHERE NOT EXISTS(서브쿼리) </b> 서브쿼리 결과값이 FALSE면 조회</p>
+            <p><b>WHERE EXISTS(서브쿼리)</b> 서브쿼리 결과값이 TRUE면 조회</p>
+            <p><b>SHOW PROFILES</b> 날린 쿼리의 시간, 쿼리를 보여 줌</p>
+            <p><b>SHOW PROFILES FOR QUERY 숫자</b> 쿼리 숫자에 해당하는 쿼리의 STATUS와 DURATION을 보여줌</p>
+            <p><b>EXPLAIN SELECT</b> SELECT 구문의 실행계획을 무거운 순서대로 보여 줌</p>
+            <p><b>DELETE 서브쿼리</b> DELETE FROM TABLE WHERE 칼럼 IN (서브쿼리)</p>
+            <p><b>INSERT INTO TABLE(칼럼...) SELECT 칼럼... FROM 테이블</b> </p>
+            <p><b>SELECT 구문1 UNION SELECT 구문2</b> 구문1의 결과와 구문2의 결과를 합침(칼럼특징은 같아야하며 UNION ALL을 할 경우 중복도 결과)</p>
+            <p><b>SELECT 구문1 EXCEPT SELECT 구문2</b> 구문1의 결과와 구문2의 결과를 빼줌(칼럼특징은 같아야함)</p>
+            <p><b>SELECT 구문1 INTERSECT SELECT 구문2</b> 구문1의 결과와 구문2의 결과의 중복값을 보여줌(칼럼특징은 같아야하며 INTERSECT ALL을 할 경우 중복도 결과)</p>
+
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

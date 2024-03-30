@@ -1,0 +1,6 @@
+#footer{
+    height: 80px;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+}

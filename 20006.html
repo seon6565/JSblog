@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>7. CSS 트랜지션</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>CSS 트랜지션</b></h2>
+            <p><b>transform: translate(x,y,z)</b> 요소 이동(x축,y축,z축)</p>
+            <p><b>transform: scale(x,y,z)</b> 요소 확대(x축,y축,z축)</p>
+            <p><b>transform: rotate()</b> 지정한 각도만큼 회전</p>
+            <p><b>transition-property</b> 트랜지션의 적용 대상을 지정(기본값ALL)</p>
+            <p><b>transition-duration</b> 트랜지션의 실행 시간을 지정(단위는 s(초))</p>
+            <p><b>transition-delay</b> 트랜지션의 지연 시간을 지정(단위는 s(초))</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>2. JavaScript </h2>
+            <p>(변수,자료형,연산자,조건문,반복문)</p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>JavaScript (변수,자료형,연산자,조건문,반복문)</b></h2>
+            <p><b>변수</b> 프로그램이 실행되는 동안 값이 달라질 수도 있는 데이터</p>
+            <p><b>숫자형</b> 숫자로만 표시</p>
+            <p><b>문자열</b> ''나 ""로 표시</p>
+            <p><b>논리형</b> true, false 값만 가짐</p>
+            <p><b>배열</b> 하나의 변수에 여러 개의 값이 있음</p>
+            <p><b>객체</b> 함수와 속성들이 함께 포함 된 자료형</p>
+            <p><b>undefined</b> 데이터 유형이 지정되지 않았을 때의 상태를 나타냄</p>
+            <p><b>null</b> 데이터 값이 유효하지 않은 상태를 나타냄</p>
+            <p><b>산술 연산자</b> +, -, *, /, %, ++, --</p>
+            <p><b>할당 연산자</b> =, +=, -=, *=, /=, %=</p>
+            <p><b>비교 연산자</b> ==, !=, ===, !==, <, <=, >. >=</p>
+            <p><b>논리 연산자</b> !, &&, ||</p>
+            <p><b>조건 연산자</b> (조건)?true일때 실행 :false일때 실행</p>
+            <p><b>if문</b> if(조건){ 조건이 true일 때 실행 }</p>
+            <p><b>if~else문</b> if(조건){ 조건이 true일 떄 실행 } else{ 조건이 false일 때 실행 }</p>
+            <p><b>switch문</b> switch(조건){ case 값1: 실행 break; case 값2 실행 break; default: 실행}</p>
+            <p><b>for문</b> for(초기값; 조건; 증가식){ 실행 }</p>
+            <p><b>while문</b> while(조건){ 실행 }</p>
+            <p><b>do~while문</b> do { 실행 } while(조건) </p>
+            <p><b>break;</b> 반복문이 끝나기 전 조건에 따라 반복문을 종료</p>
+            <p><b>continue;</b> 반복 과정을 생략하고 반복문 처음으로 돌아감</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

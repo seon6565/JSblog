@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>2. CSS 기본</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>CSS 기본</b></h2>
+            <p><b>브라우저 기본 스타일</b> 웹 브라우저에 웹문서를 표시할 떄 브라우저에서 기본으로 사용</p>
+            <p><b>인라인 스타일</b> style 속성을 사용해 필요한 요소에 스타일을 직접 지정 </p>
+            <p><b>내부 스타일 시트</b> 문서 앞 부분에 문서에서사용하는 스타일을 모아서 정의 및 관리 </p>
+            <p><b>외부 스타일 시트</b> 문서에서사용하는 스타일을 모아서 따로 파일로 저장한 후 연결해서 사용</p>
+            <p><b>전체 선택자</b> 문서의 모든 요소에 스타일 적용 </p>
+            <p><b>타입 선택자</b> 특정 태그를 사용한 요소에 스타일 적용</p>
+            <p><b>클래스 선택자</b> 해당 클래스에 해당하는 요소에 스타일 적용</p>
+            <p><b>id 선택자</b> 해당 ID에 해당하는 요소에 스타일 적용</p>
+            <p><b>그룹 선택자</b> 여러 선택자를 묶어서 적용</p>
+            <p><b>적용 우선도 순위</b> 1. 사용자 스타일 -> 2. 제작자 스타일 -> 3. 브라우저 기본 스타일 </p>
+            <p><b>적용 우선도 순위</b> 1. !important -> 2. 인라인 스타일 -> 3. id 스타일 -> 4. 클래스 스타일 -> 5. 타입 스타일 </p>
+            <p><b>*우선도가 동일할 경우 나중에 작성한 스타일이 기존 스타일을 덮어씌우면서 적용 됨</b> </p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

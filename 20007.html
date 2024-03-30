@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        h2, p {
+            margin-bottom: 10px;
+        }
+        #right{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>8. CSS 레이아웃</h2>
+            <p>(flex, grid)</p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>CSS 레이아웃</b></h2>
+            <p><b>플렉스 컨테이너 지정</b> display: (flex, inline-flex)</p>
+            <p><b>flex-direction</b> 주축 방향을 지정(row, row-reverse, column, column-reverse)</p>
+            <p><b>flex-wrap</b> 컨테이너 너비를 넘을 경우 줄 바꿈 여부(nowrap, wrap, wrap-reverse)</p>
+            <p><b>flex-flow</b> 배치 방향과 줄 바꿈을 한번에 지정</p>
+            <p><b>justify-content</b> 주축에서 정렬 방법 지정(flex-start, flex-end, center, space-between, space-around)</p>
+            <p><b>align-items</b> 교차축에서 정렬 방법을 지정(flex-start, flex-end, center, baseline, stretch)</p>
+            <p><b>align-self</b> 교차축에서 개별로 정렬 방법을 지정(flex-start, flex-end, center, baseline, stretch)</p>
+            <p><b>align-content</b> 여러 줄 일때 뭉쳐서 정렬 방법을 지정(flex-start, flex-end, center, space-between, space-around,stretch)</p>
+            <p><b>그리드 컨테이너 지정</b> display: (grid, inline-grid)</p>
+            <p><b>grid-template-columns</b> 칼럼을 지정(갯수,크기)</p>
+            <p><b>grid-template-rows</b> 줄 높이를 지정</p>
+            <p><b>grid-column-gap</b> 칼럼 가격을 지정</p>
+            <p><b>grid-row-gap</b> 줄 간격을 지정</p>
+            <p><b>grid-column-start</b> 칼럼 시작 라인 번호 지정</p>
+            <p><b>grid-column-end</b> 칼럼 끝 라인 번호 지정</p>
+            <p><b>grid-column</b> 칼럼 시작 번호와 끝 번호(시작번호/끝번호)</p>
+            <p><b>grid-row-start</b> 줄 시작 라인 번호 지정</p>
+            <p><b>grid-row-end</b> 줄 끝 라인 번호 지정</p>
+            <p><b>grid-row</b> 줄 시작 번호와 끝 번호(시작번호/끝번호)</p>
+            <p><b>grid-area</b> 탬플릿 이름 지정</p>
+            <p><b>grid-template-areas</b> grid-area를 이용해 템플릿 그리드 지정</p>
+            <p><b>minmax()</b> 최소값과 최대값을 지정</p>
+            <p><b>repeat()</b> 값은 값을 여러번 반복할때 사용(크기,auto-fill,auto-fit)</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

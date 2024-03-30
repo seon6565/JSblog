@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>3. CSS 속성</h2>
+            <p>(글자, 텍스트, 색상)</p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>CSS 속성(글자, 텍스트 색상)</b></h2>
+            <p><b>font-family</b> 글꼴 종류를 지정</p>
+            <p><b>font-size</b> 글자 크기를 지정</p>
+            <p><b>font-style</b> 글자를 이탤릭체로 표시할지 지정</p>
+            <p><b>font-weight</b> 글자의 굵기를 지정</p>
+            <p><b>color</b> 글자색을 지정</p>
+            <p><b>text-decoration</b> 텍스트에 밑줄이나 취소선을 표시할지 여부를 지정</p>
+            <p><b>text-transform</b> 텍스트 전체 또는 첫 글자를 대문자로 표시</p>
+            <p><b>text-shadow</b> 텍스트에 그림자를 추가</p>
+            <p><b>letter-spcing</b>글자 사이의 간격을 지정</p>
+            <p><b>word-spacing</b>단어 사이의 간격을 지정</p>
+            <p><b>text-align</b>텍스트 정렬 방법을 지정</p>
+            <p><b>line-height</b>줄 간격을 조절</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

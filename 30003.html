@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>4. JavaScript 객체 </h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>JavaScript 객체</b></h2>
+            <p><b>객체(object)</b> 프로그램에서 인식할 수 있는 모든 대상</p>
+            <p><b>프로퍼티(property)</b> 객체의 특징이나 속성</p>
+            <p><b>메서드(method)</b> 객체에서 할 수 있는 동작</p>
+            <p><b>객체 인스턴스</b> new 객체명으로 생성</p>
+            <p><b>window</b> 브라우저 창이 열릴 때마다 하나씩 생성, 창 안 요소 중 최상위</p>
+            <p><b>document</b> 웹 페이지마다 하나씩 있으며, body 태그를 만나면 생성됨. HTML 문서의 정보가 담겨 있음</p>
+            <p><b>navigator</b> 현재 사용하는 브라우저의 정보가 들어 있음</p>
+            <p><b>history</b> 현재 창에서 사용자의 방문 기록을 저장</p>
+            <p><b>location</b> 현재 페이지의 URL 정보가 담겨 있음</p>
+            <p><b>screen</b> 현재 사용하는 화면 정보를 다룸</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>6. Java 제어자</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>Java 제어자</b></h2>
+            <p><b>접근 지정자</b> public, protected, default, private</p>
+            <p><b>public</b> 동일 패키지의 모든 클래스 + 다른 패키지의 모든 클래스</p>
+            <p><b>protected</b> 동일 패키지의 모든 클래스 + 다른 패키지의 자식 클래스</p>
+            <p><b>default</b> 동일 패키지의 모든 클래스</p>
+            <p><b>private</b> 동일 클래스</p>
+            <p><b>static</b> 객체의 생성 없이 클래스명.멤버명으로 바로 사용 가능</p>
+            <p><b>정적 메서드</b> 정적 메서드내부에서는 정적 멤버만 사용할 수 있음</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

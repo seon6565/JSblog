@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>5. Java 클래스와 객체</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>Java 클래스와 객체</b></h2>
+            <p><b>구조체(struct)</b> 서로 다른 자료형도 1개의 자료형으로 묶어 관리 struct Score {int[] a = {10,20,30}; double b = 78.11 }</p>
+            <p><b>클래스(Class)</b> 다양한 자료형의 데이터와 메서드들을 함께 관리</p>
+            <p><b>절차지향형 프로그래밍(Procedural Programming)</b> 순서에 맞춰 단계적으로 실행되도록 명령어를 나열</p>
+            <p><b>객체지향형 프로그래밍(Object-Oriented Programming)</b> 프로그램이 객체 단위로 수행</p>
+            <p><b>클래스(Class) 내부 구성</b> 클래스의 멤버(필드(field), 메서드(method), 이너클래스(inner class))+생성자(constructor) </p>
+            <p><b>필드(field)</b> 클래스에 포함된 변수</p>
+            <p><b>메서드(method)</b> 클래스가 지니고 있는 기능(함수)</p>
+            <p><b>이너클래스(inner class)</b> 클래스 내부의 클래스</p>
+            <p><b>생성자(constructor)</b> 클래스의 객체를 생성하는 역할</p>
+            <p><b>인스턴스(instance)</b> 클래스의 생성자로 만들어진 객체</p>
+            <p><b>클래스명 변수명 = new 생성자();</b></p>
+            <p><b>지역 변수(local variable)</b> 메서드에 포함된 변수</p>
+            <p><b>메서드 시그니처(method signature)</b> int <b>sum</b> (<b>int</b> a, <b>int</b> b){ return 3; } 해당 예시에서 sum, int 부분을 메서드 시그니처라 한다.</p>
+            <p><b>가변 길이 배열 입력 매개변수</b> 메서드명(자료형...변수명){ } ...을 붙여주면 가변길이로 가능하다.</p>
+            <p><b>생성자(constructor)</b> 는 1. 반드시 클래스명과 동일 2. 리턴 타입이 없다.</p>
+            <p><b>기본 생성자</b> 는 없으면 컴파일러가 자동으로 추가 함, 생성자는 여러개 가능함</p>
+            <p><b>this</b> 자신이 포함된 클래스의 객체를 가리킴(모든 메서드에는 this라는 참조 변수가 있으며, 컴파일러가 자동 추가해준것)</p>
+            <p><b>this()</b> 자신이 속한 클래스내부의 다른 생성자를 호출(1. 생성자의 내부에서만 사용 2. 생성자의 첫 줄에 위치)</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSP</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>4. request, response 객체</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>request, response 객체</b></h2>
+            <p><b>request 객체의 주요 메서드</b> </p>
+            <p><b>request.getMethod()</b> method 방식 정보 (get/post)</p>
+            <p><b>request.getRequestURL()</b> 호스트 포함한 주소</p>
+            <p><b>request.getRequestURI()</b> 호스트 미포함한 주소</p>
+            <p><b>request.getProtocol()</b> 프로토콜 정보 ex)HTTP/1.1</p>
+            <p><b>request.getServerName()</b> 서버이름</p>
+            <p><b>request.getServerPort()</b> 포트</p>
+            <p><b>request.getRemoteAddr()</b> 클라이언트 IP주소</p>
+            <p><b>request.getQueryString()</b> get방식과 같이 URL뒤의 ?부터의 문자열</p>
+            <p><b>request.getParameter("속성이름")</b> 속성이름에 해당하는 전송된 값</p>
+            <p><b>request.getParameterValues("속성이름")</b> 속성이름에 해당하는 값이 여러개일 경우</p>
+            <p><b>request.getHeaderNames()</b> 헤더이름을 가져옴(Enumeration객체)</p>
+            <p><b>request.getHeader("헤더이름")</b> 헤더이름에 해당하는 값
+            <br>*주로쓰는 헤더이름 user-agent(웹브라우저의종류), referer(링크로 접속한 이전경로), cookie(쿠키정보)</p>
+            <p><b>request.getRequestDispatcher("포워드할경로").forword(request,response)</b> 포워드할 경로 뒤에 ?속성=값 을 붙여서 보낼수도 있음.</p>
+            <p><b>response 주요 메서드</b> </p>
+            <p><b>response.sendRedirect("보낼주소")</b> </p>
+            <p><b>response.addDateHeader("헤더키","date값")</b> </p>
+            <p><b>response.addIntHeader("헤더키","Int값"))</b> </p>
+            <p><b>response.addHeader("헤더키","문자값")</b> </p>
+            <p><b>response.getHeaderNames()</b> </p>
+            <p><b>response.getHeader("헤더키")</b> </p>
+            
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

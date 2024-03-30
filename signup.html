@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <style>
+        
+        #header{
+            background: url("img/login.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        #main{
+            margin: 0px auto;
+            width: 800px;
+        }
+                
+        fieldset{
+            margin-top: 10px;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        input{
+            margin-top: 10px;
+            margin-bottom: 15px;
+            border: 0px;
+            border-bottom: 1px solid black;
+        }
+        button{
+            margin-top: 10px;
+            padding: 5px;
+            border-radius: 20px;
+        }
+        form p{
+            font-size: 25px;
+        }
+        form span{
+            font-size: 15px;
+        }
+        form input{
+            font-size: 20px;
+            width: 700px;
+        }
+        #message{
+            resize: none;
+            width: 700px;
+            height: 100px;
+        }
+
+        #footer{
+            width: 800px;
+            height: 100px;
+            margin: 20px auto;
+            margin-top: 0px;
+        }
+        textarea{
+            padding: 5px;
+        }
+        
+        .checkSpan{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>    
+            <div id="headerText">
+                <h2>Sign Up</h2> 
+            </div>
+        </div>
+
+        <div id="main"> 
+            <form onsubmit="checkAll('.checkInput','.checkSpan')">
+                <fieldset>
+                    <p>회원 가입</p> 
+                    <label for="id">ID</label> <span class="checkSpan">아이디를 입력하세요.</span><br>
+                    <input type="text" id="id" name="id" value="" maxlength="20" class="checkInput">
+                    <br>
+                    <label for="pwd">Password</label> <span class="checkSpan">비밀번호를 입력하세요.</span><br>
+                    <input type="password" id="pwd" name="pwd" value="" maxlength="20"  placeholder="영문+숫자+특수문자조합" onblur="checkInputKey(id)" class="checkInput">
+                    <br>
+                    <label for="email"><span>Email Address</span></label> <span class="checkSpan">이메일을 입력하세요.</span><br>
+                    <input type="email" id="email" name="email" value="" maxlength="20" class="checkInput"> 
+                    <br>
+                    <label for="phone"><span>Phone Number</span></label> <span class="checkSpan">전화번호를 입력하세요.</span><br>
+                    <input type="tel" id="phone" name="phone" value="" maxlength="20"class="checkInput" > 
+                    <br>
+                </fieldset>  
+                <button type="submit" onclick="checkInputKey('pwd')">회원 가입</button>
+            </form>
+        </div>
+
+        <div id="footer">
+            <script>footerNav();</script>
+        </div>
+    </div>
+</body>
+</html>

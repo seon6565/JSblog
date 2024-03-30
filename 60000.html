@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MariaDB1</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+        #left{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>1. DataBase의 기초 이론</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>DataBase의 기초 이론</b></h2>
+            <p><b>데이터(Data)</b> 생활에서 수집되는 모든 수치, 비수치 데이터(raw data)</p>
+            <p><b>정보(Information)</b> 데이터에 의미 있는 가공을 한 것</p>
+            <p><b>지식(Knowledge)</b> 정보들의 패턴을 바탕으로 경험, 학습, 이해, 추론을 통해 처리된 결과물</p>
+            <p><b>데이터베이스(Database)</b> 컴퓨터의 저장장치에 저장되는 구조화된 데이터의 집합</p>
+            <p><b>DBMS(DataBase Management System)</b> 데이터베이스를 관리하는 시스템</p>
+            <p><b>ACID</b> 트랜잭션이 갖는 네가지 특성</p>
+            <p><b>Atomicity(원자성)</b> 트랜잭션이 전부 실행되거나 하나도 실행되지 않아야 한다.</p>
+            <p><b>Consistency(일관성)</b> 미리 정의된 규칙에 의해서만 데이터 조작이 가능해야 한다.</p>
+            <p><b>Isolation(독립성)</b> 하나의 트랜잭션이 실행되는 중 다른 트랜잭션이 끼어들면 안된다.</p>
+            <p><b>Durability(지속성)</b> 실행이 완료되면 결과가 반영되어 보장되야한다.</p>
+            <p><b>MariaDB</b> 오픈소스 데이터베이스 관리 시스템으로 RDMS이다.</p>
+            <p><b>Relational DataBase Management System(관계형 데이터베이스 관리 시스템)</b> SQL을 사용하여 데이터를 조작한다.</p>
+            <p><b>SQL(Structured Query Language)</b> 데이터 베이스를 관리, 조작, 정의 하기 위한 표준 언어</p>
+            <p><b>DDL(Data Definition Language)데이터 정의 언어</b> 데이터베이스의 구조를 정의하는데 사용된다.
+            <br>*CREATE, ALTER, DROP, TRUNCATE</p>
+            <p><b>DML(Data Manipulation Language)데이터 조작 언어</b> 데이터베이스 내에 저장된 데이터를 조작하는데 사용된다.
+            <br>*SELECT, INSERT, UPDATE, DELETE</p>
+            <p><b>DCL(Data Control Language)데이터 제어 언어</b> 데이터베이스를 관리하는데 사용된다.
+            <br>*GRANT, REVOKE</p>
+            <p><b>TCL(Transaction Control Language)트랜잭션 제어 언어</b> DML에 의해 변경된 결과를 데이터베이스에 반영하는 데 사용된다.
+            <br>*COMMIT, ROLLBACK</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

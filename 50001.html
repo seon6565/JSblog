@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>2. Java 변수와 자료형 </h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>Java 변수와 자료형</b></h2>
+            <p><b>변수의 생존 기간</b> 생성된 변수는 자신이 선언된 { }가 끝나면 메모리에서 삭제된다.</p>
+            <p><b>기본 자료형</b> boolean(1byte), byte(1byte), short(2byte), int(4byte), long(8byte), float(4byte), double(8byte), char(2byte) </p>
+            <p><b>참조 자료형</b> 배열, 클래스, 인터페이스</p>
+            <p><b>자바의 메모리 구조</b> 메모리는 목적에 따라 크게 3가지 영역으로 나뉜다. ㅣ 클래스,정적,상수,메서드영역 ㅣ 스택 영역 ㅣ 힙 영역 ㅣ</p>
+            <p><b>boolean</b> 부울대수 자료형(true, false) </p>
+            <p><b>byte, short, int, long</b> 정수 자료형</p>
+            <p><b>float, double</b> 실수 자료형</p>
+            <p><b>char</b> 문자 자료형</p>
+            <p><b>업캐스팅(up-casting)</b> 크기가 작은 자료형을 큰 자료형으로 대입</p>
+            <p><b>다운캐스팅(down-casting)</b>큰 자료형을 작은자료형으로 대입 </p>
+            <p><b>byte&ltshort/char&ltint&ltlong&ltfloat&ltdouble</b>자료형의 크기 순서 </p>
+
+
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

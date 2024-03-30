@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>2. HTML구조 파악하기</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>HTML 구조</b></h2>
+            <p> HTML은 보통 <b> &lt!DOCTYPE html&gt</b>로 시작해서 <b>&lthtml&gt</b> <b>&lthead&gt</b> <b> &ltbody&gt</b>의
+                3개 영역으로 구성되어 있습니다.
+            <P><b> &lt!DOCTYPE html&gt</b>는 문서 유형을 지정하는 태그로 웹 브라우저에 현재 문서가 HTML5라고 알려주는 것입니다.</P>
+            <p><b> &lthtml&gt &lt/html&gt</b>는 HTML파일의 시작과 끝을 표시합니다.
+            <br>&nbsp<b> &lthtml lang="ko"&gt</b>는 검색 및 화면 낭독기에서 식별시 사용됩니다.</p>
+            <b> &lthead&gt &lt/head&gt</b>는 웹 브라우저에 문서 정보를 알려주는 태그입니다.
+                <br>&nbsp<b> &ltmeta&gt</b>는 문자 세트를 비롯해 문서 정보가 들어가 있습니다.<br>&nbsp<b> &ltmeta charset="UTF-8"&gt</b>는 UTF-8이라는 문자세트를 사용한다고 웹브라우저에 알려주는 것입니다.
+                <br>&nbsp<b> &lttitle&gt &lt/title&gt</b> 태그는 문서 제목을 나타냅니다.
+            <p><b> &ltbody&gt &lt/body&gt</b>는 웹 브라우저에 내용을 표시하는 태그입니다.
+                <br>&nbsp <b> &ltbody&gt</b>태그의 다양한 태그들은 이후 장에서 설명하도록 하겠습니다.
+            
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

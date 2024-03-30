@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSP</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>8. JDBC 연동, 커넥션 풀</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>JDBC 연동, 커넥션 풀</b></h2>
+            <p><b>Connection con</b> 커넥션 객체</p>
+            <p><b>Class.forName("org.mariadb.jdbc.Driver")</b> 드라이버 로딩</p>
+            <p><b>con = DriverManager.getConnection("jidbc:mariadb://loacalhost:3306/maria","ID","PWD")</b> 드라이버매니저에 URL,ID,PWD를 통해 Connection 할당</p>
+            <p><b>PreparedStatement psmt = con.perpareStatement("Select * from ?")</b> PreparedStatement 객체 생성</p>
+            <p><b>psmt.setString(1,"tbl")</b> ?에 값 할당</p>
+            <p><b>psmt.execute();</b> query실행(execute의 경우 리턴값은 boolean)</p>
+            <p><b>커넥션 풀</b> 미리 생성된 것을 가져다 쓰는것</p>
+            <p><b>JNDI</b> 미리 설정된 이름으로 찾아쓰는 디렉터리서비스</p>
+            <p><b>Server.xml</b> &ltglobalNamingResources&gt 안에 &ltResource 속성들 셋팅 /&gt</p>
+            <p><b>Context.xml</b> &ltResourceLink&gt 안에 &lt 속성들 셋팅 /&gt</p>
+            <p><b>Context.lookup("이름")</b> lookup하고자 하는 이름을 context.xml의 golbal속성에서 찾은 후 context.xml의 name속성값으로 server.xml의 name과 매칭시켜줌</p>
+            <p><b>Context initctx = new InitialContext();</b> context 초기 객체 생성</p>
+            <p><b>Context ctx = (context)initctx.lookup("java:comp/env")</b> context 경로 연결</p>
+            <p><b>DataSource source = (DataSource)ctx.lookup("이름")</b>이름을 통해서 Context.xml->Server.xml에 접근하여 설정 값으로 생성 된 데이터소스를 가져옴</p>
+            <p><b>Connection con = source.getConnetion();</b>가져온 데이터소스의 커넥션을 커넥션 객체에 할당</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

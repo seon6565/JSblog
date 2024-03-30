@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSP</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+        #right{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>10. Action Tag</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>Action Tag</b></h2>
+            <p><b>&ltjsp:include page="파일경로"/&gt</b> page영역 공유X, 페이지로 이동 후 결과를 현재 페이지에 포함</p>
+            <p><b>&ltjsp:forward page="파일경로"/&gt</b> page영역 공유X, 페이지로 이동 후 결과값만 리턴</p>
+            <p><b>&ltjsp:useBean id="변수명" class="패키지.클래스" scope="영역" /&gt</b> 영역=page,request,session,application</p>
+            <p><b>&ltjsp:setProperty name="변수명" property="속성명" value="값" /&gt</b> 속성명에 값 할당</p>
+            <p><b>&ltgetProperty name="변수명" property="속성명" /&gt</b> 변수명의 속성명에 해당하는 값을 가져옴</p>
+            <p><b>&ltjsp:setProperty name="변수명" property="*" /&gt</b> 폼으로 가져온 값을 의존성 주입</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

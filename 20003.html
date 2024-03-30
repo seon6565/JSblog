@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>4. CSS 속성</h2>
+            <p><b>(박스, 테두리, 여백, 레이아웃, 위치 지정)</b></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>CSS 속성(박스, 테두리, 여백, 레이아웃, 위치 지정) </b></h2>
+            <p><b>width</b> 박스 모델의 너비를 지정</p>
+            <p><b>height</b> 박스 모델의 높이를 지정</p>
+            <p><b>box-sizing</b> 박스 모델의 크기를 계산할 때 border를 포함할 경우 border-box, 컨텐츠만 계산할 경우 content-box(기본값)</p>
+            <p><b>border-style</b> 테두리 스타일 지정</p>
+            <p><b>border-width</b> 테두리 두께 지정</p>
+            <p><b>border-color</b> 테두리 색상 지정</p>
+            <p><b>border-radius</b> 꼭짓점을 둥글게 만듬</p>
+            <p><b>margin</b> 마진을 지정</p>
+            <p><b>padding</b> 패딩을 지정</p>
+            <p><b>display</b> 요소를 배치하는 방법을 지정(block, inline, inline-block, none, grid, flex 등)</p>
+            <p><b>float</b> 웹 요소를 왼쪽이나 오른쪽으로 배치(inline으로)</p>
+            <p><b>clear</b> float을 해제하여 요소를 다음(아래)로 배치를 원할 경우 사용</p>
+            <p><b>left</b> 기준 위치에서 왼쪽에서 떨어지는 범위지정</p>
+            <p><b>right</b> 기준 위치에서 오른쪽에서 떨어지는 범위지정</p>
+            <p><b>top</b> 기준 위치에서 위에서 떨어지는 범위지정</p>
+            <p><b>bottom</b> 기준 위치에서 아래에서 떨어지는 범위지정</p>
+            <p><b>position</b> 웹 요소의 위치를 지정(static, relative, absolute, fixed)</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

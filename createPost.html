@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATE POSTS</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <style>
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+
+        #main{
+            margin: 0px auto;
+            width: 1200px;
+        }
+        .section a{
+            color: black;
+        }
+        .section{
+            padding: 20px;
+        }
+        .article{
+            padding: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid black;
+        }
+        #title{
+            width: 1200px;
+            height: 50px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #content{
+            width: 1200px;
+            height: 500px;
+            border-radius: 15px;
+            padding: 10px;
+            font-size: 15px;
+            resize: none;
+        }
+        .inputBtn{
+            margin: 5px;
+            padding: 5px;
+        }
+        fieldset{
+            border: none;
+        }
+        input{
+            padding: 5px;
+            border-radius: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>Create Posts</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="section" id="section1">
+            <form>
+                <fieldset>
+                    <input type="text" maxlength="20" name="title" id="title" placeholder="제목을 입력하세요.">
+                    <textarea name="content" id="content" placeholder="내용을 입력하세요." maxlength="300"></textarea>
+                    <input type="file" name="file" id="file"><br><hr>
+                    <input type="submit" value="Create" class="inputBtn">
+                    <input type="reset" value="Reset" class="inputBtn">
+                </fieldset>
+            </form>
+        </div>
+       
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

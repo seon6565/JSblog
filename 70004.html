@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSP</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>5. out, application, exception 객체</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>out, application, exception 객체</b></h2>
+            <p><b>out 객체의 주요 메서드</b> </p>
+            <p><b>out.print("버퍼에저장")</b> </p>
+            <p><b>out.clearBuffer()</b> 버퍼 비우기</p>
+            <p><b>out.getBufferSize()</b> 현재 버퍼에 저장된 사이즈</p>
+            <p><b>out.getRemainning()</b> 전체버퍼사이즈-현재버퍼에저장된사이즈</p>
+            <p><b>out.flush()</b> 버퍼에 저장된 내용 출력(별다른 설정이 없을 시 버퍼가 가득차면 자동flush)</p>
+            <p><b>application 객체의 주요 메서드</b> </p>
+            <p><b>application.getRealPath("/프로젝트명")</b> 물리적 경로 방법1</p>
+            <p><b>this.getServletContext().getRealPath("/프로젝트명")</b> 물리적 경로 방법2</p>
+            <p><b>app.getRealPath("/프로젝트명")</b> 물리적 경로 방법3</p>
+            <p><b>application.getInitParameter("INIT_PARAM")</b> 초기화 변수</p>
+            <p><b>exception 객체의 주요 사용법</b> </p>
+            <p><b>web.xml에 에러페이지,코드,로케이션 태그 추가
+            <br> &lterror-page&gt
+            <br> &lterror-code&gt 404(오류코드) &lt/error-code&gt
+            <br> &ltlocation&gt /프로젝트명/이동할.jsp&lt/location&gt
+            <br> &lt/error-page&gt
+            </b> </p>
+            <p><b>response.getStatus()</b>에러코드 확인하는 메서드</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

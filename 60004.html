@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MariaDB</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>5. 내장 함수</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>내장 함수</b></h2>
+            <p><b>LEFT(str, 갯수)</b> 왼쪽에서 갯수만큼 짜름</p>
+            <p><b>RIGHT(str, 갯수)</b> 오른쪽에서 갯수만큼 짜름</p>
+            <p><b>MID()=SUBSTR()=SUBSTRING(str, pos, len)</b> pos위치부터 개수만큼 짜름(pos생략가능, 위치는 0이아닌 1부터 시작)</p>
+            <p><b>SUBSTRING_INDEX(str,찾고자하는것(ex .),갯수)</b> 찾고자하는것의 갯수의 앞까지 짜름</p>
+            <p><b>INSTR(str,'찾고자하는것')</b> 찾고자 하는 것의 첫번째 인덱스(1부터 시작, 없으면 0)</p>
+            <p><b>LOCATE(str, 칼럼)</b> 칼럼 내의 str의 시작 위치</p>
+            <p><b>LCASE()=LOWER(str)</b> 소문자로 만듬</p>
+            <p><b>UCASE()=UPPER(str)</b> 대문자로 만듬</p>
+            <p><b>LTRIM(str)</b> 왼쪽 공백 제거</p>
+            <p><b>RTRIM(str)</b> 오른쪽 공백 제거</p>
+            <p><b>TRIM(str)</b> 양쪽 공백 제거</p>
+            <p><b>REPLACE(str,befstr,aftstr)</b> str에서 befstr을 aftstr로 변경</p>
+            <p><b>CHAR_LENGTH(str)</b> 문자수 반환</p>
+            <p><b>LENGTH(str)</b> byte수 반환(한글은 3byte, 알파벳은 1byte)</p>
+            <p><b>CONCAT(str1,str2.....)</b> 문자열 합치기</p>
+            <p><b>CONCAT_WS('구분문자',str1,str2.......)</b> 구분문자를 추가하면서 합침</p>
+            <p><b>CONVERT('바꿀값',바꿀타입(사이즈))</b> ex. CONVERT(123,VARCHAR(20))</p>
+            <p><b>LPAD(str, 길이, 길이될때까지채울것)</b> 길이가 될때까지 채움(미지정시 공백), 짧으면 LEFT()효과</p>
+            <p><b>RPAD(str, 길이, 길이될때까지채울것)</b> 길이가 될때까지 채움(미지정시 공백), 짧으면 RIGHT()효과</p>
+            <p><b>INSERT(str,인덱스,갯수,넣을문자열)</b> 인덱스에서 개수만큼 짜른뒤 넣을문자열로 대체</p>
+            <p><b>REVERSE(str)</b> 문자열 뒤집기 ex. ABCD -> DCBA</p>
+            <p><b>SPACE(갯수)</b> 공백 생성</p>
+            <p><b>FORMAT(12345.6789,2)</b> 12345.68 (반올림)</p>
+            <p><b>ASCII('A')</b> 해당 ASCII값 65(여러글자일 경우 첫글자만 반환)</p>
+            <p><b>CHAR(65,66,67)</b> 해당 ASCII의 CHAR반환 ABC</p>
+            <p><b>TO_CHAR(날짜데이터,'YYYY-MM-DD')</b> 날짜데이터를 CHAR로 변환(HH시간,MI분,SS초)</p>
+            <p><b>ADDDATE(날짜데이터,30)</b> 30일 후(-일 경우 30일전)</p>
+            <p><b>NOW(),CURRENT_TIMESTAMP()</b> 현재의 연월일시분초</p>
+            <p><b>CURDATE(),CURRENT_DATE()</b> 현재의 연월일</p>
+            <p><b>CURTIME(),CURRENT_TIME()</b> 현재의 시분초</p>
+            <p><b>YEAR(날짜데이터),MONTH(날짜데이터),DAY(날짜데이터)</b> </p>
+            <p><b>HOUR(날짜데이터),MINUTE(날짜데이터),SECOND(날짜데이터),MICROSECOND(날짜데이터)</b> </p>
+            <p><b>DATE(날짜데이터),TIME(날짜데이터)</b> 연월일, 시분초</p>
+            <p><b>DATEDIFF(1날짜, 2날짜)</b> 1날짜에서 2날짜를 -함</p>
+            <p><b>TIMEDIFF(1시간, 2시간)</b> 1시간에서 2시간을 -함</p>
+            <p><b>LAST_DAY(날짜데이터)</b> 해당 월의 마지막 일을 반환</p>
+            <p><b>QUARTER(날짜데이터)</b> 해당 분기를 반환</p>
+            <p><b>DATE_FORMAT(날짜데이터, '%Y/%m/%d')</b> 날짜데이터를 포맷에 맞게 반환</p>
+            <p><b>ABS(값)</b> 절대값</p>
+            <p><b>CEIL(값), FLOOR(값), ROUND(값)</b> 올림, 버림, 반올림</p>
+            <p><b>MOD(값,나눌값)</b> 나머지 반환</p>
+            <p><b>PI()</b> PI값 3.14.........반환</p>
+            <p><b>POWER(값,승수)</b> 값에 ^승수를 함</p>
+            <p><b>RAND(값)</b> 0~1사이의 난수 반환</p>
+
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

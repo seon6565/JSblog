@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MariaDB</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>9. VIEW, ALTER</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>VIEW, ALTER</b></h2>
+            <p><b>CREATE VIEW 뷰이름 AS SELECT문</b> 뷰 생성</p>
+            <p><b>SELECT * FROM 뷰이름</b> 뷰 조회</p>
+            <p><b>CREATE OR REPLACE VIEW 뷰이름 AS SELECT문</b> 뷰이름이 존재 시 변경</p>
+            <p><b>SELECT * FROM 뷰이름 ORDER BY 칼럼명 DESC </b> ORDER BY시 SELECT문의 ORDER BY는 무시 됨</p>
+            <p><b>DROP VIEW 뷰이름</b> </p>
+            <p><b>SHOW CREATE VIEW 뷰이름</b> VIEW 이름, 내용, charset 보여줌</p>
+            <p><b>VIEW 특징</b> SELECT문에서 AS로 지정 시 칼럼명을 숨길 수있다, VIEW안에서는 @,@@ 사용불가(변수,시스템변수)
+            <br>VIEW는 JOIN된 테이블에는 수정에 제약이 걸릴 수 있음.(VIEW뿐만 아니라 JOIN된 테이블은 무결성 문제로 제약이 걸릴 수 있음.)</p>
+            <p><b>ALTER TABLE [IF [NOT] EXIST] 테이블명</b>
+            <br>ADD, DROP, MODIFY, CHANGE, RENAME과 COLUMN, INDEX, CONSTRAINT, FOREIGN KEY의 조합
+            <br>*[IF [NOT] EXIST]로 존재여부 확인하면서 처리가 바람직함.</p>
+            <p><b>CREATE TABLE IF NOT EXISTS 생성테이블 LIKE 스키마복제테이블</b> 스키마 복제</p>
+            <p><b>RENAME 테이블명</b> 테이블 이름 변경</p>
+            <p><b>change column 칼럼명 바꿀칼럼명 데이터타입(사이즈)</b> 칼럼명, 데이터타입(사이즈)변경</p>
+            <p><b>modify column 칼럼명,데이터타입(사이즈).....</b> 칼럼 스키마 변경</p>
+            <p><b>add column 칼럼명,데이터타입(사이즈).....</b> 칼럼 추가</p>
+            <p><b>' '하고 null은 같음, 이미 값이 들어가 있으면 칼럼 추가 시 무조건 null(디폴트값이랑 상관없이)</b> 디폴트는 인설트시 영향을 받음</p>
+            <p><b>null제약을 걸어야 할 경우</b> 제약을 없앤 후 데이터 수정 후 제약을 다시 걸어야함</p>
+            <p><b>drop column 칼럼명</b> 칼럼 제거</p>
+            <p><b>drop primary key</b> primary key 제거</p>
+            <p><b>add primary key(칼럼명,....)</b> primary key 추가</p>
+            <p><b>add constraint 제약명 check(char_length(칼럼)=5)</b> 칼럼에 데이터를 넣을 때 check() 조건에 맞지 않으면 에러 발생</p>
+            <p><b>add constraint 제약명 foreign key(FK지정할칼럼명) references 테이블(테이블의PK) [on update ~] [on delete ~]</b> 
+            <br>*~ = CASCADE = 업데이트나 제거 시 관련된 행 전부 제거, SET NULL = NULL로 변경, RESTRICT = 제거, 변경 불가</p>
+            <p><b>foreign key 생성 시 index도 같이 생성됨</b> 제거 시 index, foreign key 별도로 제거해야함.</p>
+            <p><b>SHOW INDEX FROM TABLE</b> 테이블의 INDEX들 보여 줌</p>
+            <p><b>CREATE TEMPORARY TABLE 테이블명(칼럼정의)</b> 임시테이블로 메모리에만 존재하며, 생성한 사람만 접근 가능, 세션내에서만 존재</p>
+            <p><b>주석 --, #, /* */</b> 예외로 주석에서도 실행 되는 케이스 /*! */ /*M! */ /*M!100900 */</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>7. Java 상속과 다형성</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>Java 상속과 다형성</b></h2>
+            <p><b>상속</b> 부모 클래스의 멤버를 내려받아 자식 클래스 내부에 포함시키는 것</p>
+            <p><b>상속 UML 기호</b> 상속에서 UML 기호는 부모 클래스쪽으로 향하게 그린다.</p>
+            <p><b>다형성(polymorphism)</b> 객체를 여러가지 모양으로 표현할 수 있는 특성</p>
+            <p><b>extends</b> 상속할 떄는 extends 키워드를 사용</p>
+            <p><b>class 자식클래스 extends 부모클래스 { }</b> *다중 상속 불가 *생성자는 상속되지 않음</p>
+            <p><b>변수 instanceof 타입</b> 캐스팅 가능 여부 확인</p>
+            <p><b>메서드 오버라이딩(overriding)</b> 부모 클래스에서 상속받은 메서드와 동일한 이름의 메서드를 재정의</p>
+            <p><b> 1.부모 클래스의 메서드와 시그니처 및 리턴타입이 동일해야함</b> </p>
+            <p><b> 2.부모 클래스의 메서드보다 접근 지정자의 범위가 같거나 넓어야함</b> </p>
+            <p><b>메서드 오버로딩(overloading)</b> 같은 메소드의 매개변수 중복 정의</p>
+            <p><b>super</b> 부모의 객체를 가리킴</p>
+            <p><b>super()</b> 부모의 생성자를 호출</p>
+            <p><b>Object</b> 자바의 모든 클래스는 별도의 지정이 없으면 Object 클래스를 상속 받은 상태임</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

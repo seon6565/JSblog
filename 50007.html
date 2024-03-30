@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>8. Java final, abstract</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>Java final, abstract</b></h2>
+            <p><b>final</b> 제어자는 필드, 지역변수, 메서드, 클래스 앞에 위치할 수 있다.
+            <br>final 변수는 한 번 대입된 값을 수정할 수 없다. </p>
+            <p><b>final 메서드</b> 는 최종 메서드로서 자식 클래스에서 해당 메서드를 오버라이딩 할 수 없다.</p>
+            <p><b>final 클래스</b> 는 상속 자체가 아예 불가능하다.</p>
+            <p><b>abstract</b> 가 붙은 메서드를 추상 메서드(abstract method) abstract가 붙은 클래스를 추상 클래스(abstract class)라고 한다. </p>
+            <p><b>abstract method</b> 의 구조는 abstract 리턴타입 메서드명(); </p>
+            <p><b>abstract method</b> 를 1개 이상 포함하고 있는 클래스는 반드시 추상 클래스이다. </p>
+            <p><b>abstract method</b> 는 미완성 메서드로 상속 받아서 구현한다.</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

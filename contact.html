@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="Ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <style>
+        #header{
+            background: url("img/contact.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+
+        #main{
+            margin: 20px auto;
+            margin-bottom: 0px;
+            width: 800px;
+        }
+        
+        fieldset{
+            border-radius: 20px;
+            padding: 20px;
+        }
+        input{
+            margin-bottom: 10px;
+            border: 0px;
+            border-bottom: 1px solid black;
+        }
+        button{
+            margin-top: 10px;
+            padding: 5px;
+            border-radius: 20px;
+        }
+        form p{
+            font-size: 25px;
+        }
+        form span{
+            font-size: 15px;
+        }
+        form input{
+            font-size: 15px;
+            width: 700px;
+        }
+        #message{
+            resize: none;
+            width: 700px;
+            height: 100px;
+        }
+
+        #footer{
+            width: 800px;
+            height: 100px;
+            margin: 20px auto;
+            margin-top: 0px;
+        }
+        textarea{
+            padding: 5px;
+        }
+        
+        .checkSpan{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>    
+        <div id="headerText">
+            <h2>Contact</h2>
+            <p></p>
+        </div>
+    </div>
+    <div id="main">
+        <form onsubmit="checkAll('.checkInput','.checkSpan')">
+            <fieldset>
+            <p>내용을 채워서 보내주세요. 회신 드리겠습니다.</p>
+            <label for="name"><span>Name</span></label> <span class="checkSpan">아이디를 입력하세요.</span><br>
+            <input type="text" id="name" name="name" value="" maxlength="20" class="checkInput" >
+            <br>
+            <label for="email"><span>Email Address</span></label> <span class="checkSpan">이메일을 입력하세요.</span><br>
+            <input type="email" id="email" name="email" value="" maxlength="20" class="checkInput"> 
+            <br>
+            <label for="phone"><span>Phone Number</span></label> <span class="checkSpan">전화번호를 입력하세요.</span><br>
+            <input type="tel" id="phone" name="phone" value="" maxlength="20"class="checkInput" > 
+            <br>
+            <label for="message"><span>Message</span></label>  <span class="checkSpan">내용을 입력하세요.</span><br>
+            <textarea name="message" id="message" placeholder="내용을 입력하세요." maxlength="300" class="checkInput" ></textarea>
+            <br>
+            </fieldset>
+            <button type="submit"><span>Send</span></button>
+        </form>
+    </div>
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>
+<script>
+    
+</script>

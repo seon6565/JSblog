@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>13. Java 컬렉션</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>Java 컬렉션</b></h2>
+            <p><b>컬렉션</b> 은 동일한 타입을 묶어 관리하는 자료구조</p>
+            <p><b>컬렉션 프레임워크</b> 컬렉션의 설계된 프레임워크들 이다.</p>
+            <p><b>List&ltE&gt</b> 는 인터페이스이다.</p>
+            <p><b>List&ltE&gt의 주요 메서드</b> 
+            <br> add(E), add(int, E), addAll(Collection), addAll(int, Collection)
+            <br> set(int, E)
+            <br> remove(int), remove(Object), clear()
+            <br> get(int), size(), isEmpty()
+            <br> toArray(), toArray(T[])</p>
+            <p><b>ArrayList&ltE&gt</b> 는 List&ltE&gt의 대표적인 구현 클래스로 Element를 index로 관리하며 저장 용량(기본값10)을 동적 관리한다.</p>
+            <p><b>Vector&ltE&gt</b> 는 ArrayList&ltE&gt와 유사하지만 주요 메서드가 동기화 메서드로 구현되어 있다.
+            <br>*멀티 쓰레드에서 사용할 수 있도록 기능이 추가된 것</p>
+            <p><b>LinkedList&ltE&gt</b> 는 저장용량을 지정할 수없으며, index가 아닌 앞뒤 객체의 정보를 저장한다.
+            <br>추가, 삭제는 LinkedList&ltE&gt가 빠르지만 검색의 경우 ArrayList&ltE&gt가 빠르다.</p>
+            <p><b>Set&ltE&gt</b> 는 인터페이스이다.</p>
+            <p><b>Set&ltE&gt의 주요 메서드</b> 
+            <br>add(E), addAll(Collection)
+            <br>remove(Object), clear()
+            <br>isEmpty(), contains(Object), size(), iterator()
+            <br>toArray(), toArray(T[])</p>
+            <p><b>HashSet&ltE&gt</b> 는 대표적인 Set&ltE&gt의 구현 클래스로 순서 없이 저장 용량(기본값16)을 동적 관리하며, 중복을 허용하지 않는다.</p>
+            <p><b>iterator()</b> 메서드를 호출하면 Iterator&ltE&gt의 객체가 생성 된다.
+            <br>hasNext() 다음으로 가리킬 원소의 존재 여부를 boolean으로 리턴
+            <br>next() 다음 원소 위치로 가서 읽은 값을 리턴</p>
+            <p><b>해시코드</b> 객체가 저장된 번지를 기준으로 생성된 정수형 고윳값</p>
+            <p><b>HashSet&ltE&gt</b> 에서의 중복 확인 메커니즘
+            <br>1. hashcode() 동일한지 확인
+            <br>2. equal() 결과가 true인지 확인 </p>
+            <p><b>LinkedHashSet&ltE&gt</b> 출력 순서가 항상 입력 순서와 동일(데이터 간의 연결 정보를 추가로 갖고 있음)</p>
+            <p><b>TreeSet&ltE&gt</b> 크기 순으로 출력 (정렬과 검색 기능이 추가된 것)</p>
+            <p><b>Map&ltK,V&gt</b> List&ltE&gt와 Set&ltE&gt는 Collection&ltE&gt 인터페이스를 상속받지만 Map&ltK,V&gt는 별도의 인터페이스로 존재함.</p>
+            <p><b>Map&ltK,V&gt</b> 는 Key와 Value 한 쌍으로 데이터를 저장(1쌍=entry)</p>
+            <p><b>Key</b> 는 중복 저장 불가</p>
+            <p><b>Value</b> 는 중복 저장이 가능</p>
+            <p><b>Map&ltK,V&gt</b>의 주요 메서드
+            <br>put(key, value), putAll(Map)
+            <br>replace(key, value), replace(key, oldvalue, newvalue)
+            <br>get(key), containsKey(key), containsValue(value), keySet()=Set객체로 리턴, entrySet()=Set객체로 리턴, size()
+            <br>remove(key), remove(key, value), clear()</p>
+            <p><b>HashMap&ltK,V&gt</b> Map&ltK,V&gt의 대표적인 구현 클래스로 Key값의 중복 여부를 확인하는 메커니즘은 HashSet&ltE&gt과 동일하다.
+            <br>초기 저장 용량은 16이며, 입출력 순서는 동일하지 않을 수도 있다.</p>
+            <p><b>Hashtable&ltK,V&gt</b> HashMap에 멀티 쓰레드에 안전한 특징을 추가한 것이다.</p>
+            <p><b>LinkedHashMap&ltK,V&gt</b> HashMap에 입력 데이터의 순서 정보를 추가로 갖고 있는 것이다.</p>
+            <p><b>TreeMap&ltK,V&gt</b> 입력 순서와 상관없이 데이터를 Key값의 크기 순으로 저장한다.</p>
+            <p><b>Stack&ltE&gt</b> last in first out의 Stack 자료구조를 구현한 컬렉션이다.</p>
+            <p><b>Stack&ltE&gt의 주요 메서드</b>
+            <br>push(item), peek(), search(Object), pop(), empty()
+            <br>*Vector&ltE&gt의 자식 클래스이므로 Stack&ltE&gt의 메서드도 사용이 가능하나 LIFO의 특성이 반영되지 않는다.</p>
+            <p><b>Queue&ltE&gt</b> first in first out의 Queue 자료구조를 구현한 컬렉션이다.</p>
+            <p><b>Stack&ltE&gt의 주요 메서드</b> 
+            <br>예외 처리 기능 미포함 메서드 add(item), element()=가장 상위 엘리먼트 리턴(데이터 변화X), remove()=가장 상위 엘리먼트 꺼내기
+            <br>예외 처리 기능 포함 메서드 offer(item), peek(), poll()</p>
+            
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

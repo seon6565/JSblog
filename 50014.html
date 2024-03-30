@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        h2, p {
+            margin-bottom: 10px;
+        }
+        #right{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>15. Java 입출력</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>Java 입출력</b></h2>
+            <p><b>File 클래스</b> file(파일), directory(폴더)를 관리하는 클래스</p>
+            <p><b>File의 생성자</b>File(String 위치), File(URI uri), File(File parent, String child), File(String parent, String child) 
+            <br>*파일 객체를 생성하는 시점에서는 실제 파일의 존재 유무는 확인하지 않음.(FileNotFoundException 발생할 수 있음)</p>
+            <p><b>파일 경로 구분자</b> windows=\\ mac=/ 공통=File.separator</p>
+            <p><b>절대 경로</b> 루트에서부터 특정위치까지의 전체 경로</p>
+            <p><b>상대 경로</b> 현재 작업 폴더 위치를 기준으로한 경로</p>
+            <p><b>File 클래스의 주요 메서드</b> 
+            <br>isDirectory, isFile(), getName(), getParent()
+            <br>list()=경로내의 폴더,파일이름을 문자열 배열로 리턴, listFiles()=경로내의 폴더,파일이름을 파일 객체 배열로 리턴
+            <br>mkdir(), mkdirs(), getAbsolutePath()</p>
+            <p><b>ASCII(아스키)</b> 는 American Standard Code for Information Interchange의 약자로 모든 나라의 문자를 표현할 수는 없다.</p>
+            <p><b>unicode(유니코드)</b> 는 전 세계 문자를 통합한 문자셋이다. (일단 대표적으로 UTF-8만 알아두자.) </p>
+            <p><b>byte 단위 입출력</b> InputStream, OutputStream (추상클래스)</p>
+            <p><b>char 단위 입출력</b> Reader, Writer (추상클래스)</p>
+            <p><b>InputStream의 주요 메서드</b> 
+            <br>int available() 남은 바이트 수를 리턴
+            <br>abstract int read() int의 하위 1byte에 읽은 데이터를 저장해서 리턴(추상 메서드)
+            <br>int read(byte[] b)읽은 데이터를 0번째 위치부터 저장하며 읽은 바이트 수를 리턴
+            <br>int read(byte[] b, int off, int len) len개수 만큼 읽은 데이터를 byte[] b의 off 위치부터 저장
+            <br>void close() InputStream의 자원 반환</p>
+            <p><b>OutputStream의 주요 메서드</b> 
+            <br>void flush() 메모리 버퍼에 저장된 OutputStram 내보내기(실제 출력 수행)
+            <br>abstract void write(int b) int의 하위 1byte를 output 버퍼에 출력(추상 메서드)
+            <br>void write(byte[] b) 매개변수로 넘겨진 byte[] b의 0번째 위치에서부터 메모리 버퍼에 출력
+            <br>void write(byte[] b, int off, int len) byte[]의 off위치에서 len개를 읽은 후 출력
+            <br>void close() OutputStream의 자원 반환</p>
+            <p><b>InputStream 의 자식클래스</b> FileInputStream, FilterInputStream(BufferedInputStream, DataInputStream)</p>
+            <p><b>FileInputStream</b> FileInputStream(File) FileInputStream(String)
+            <br>*.read() == -1 이면 파일의 끝을 의미.</p>
+            <p><b>OutputStream 의 자식클래스</b> FileOutputStream, FilterOutputStream(BufferedOutputStream, DataOutputStream, printStream) </p>
+            <p><b>FileOutputStream</b> FileOutputStream(File) FileOutputStream(File, boolean append) FileOutputStream(String) FileOutputStream(String, boolean append)
+            <br>*append가 true일때 이어쓰기, false일때 덮어쓰기 </p>
+            <p><b>System.in, System.out</b> 입력을 위한 InputStream 타입의 객체, 출력을 위한 PrintStream 타입의 객체</p>
+            <p><b>BufferedInputStream</b> BufferedInputStream(InputStream) BufferedInputStream(InputStream, int size)</p>
+            <p><b>BufferedOutputStream</b> BufferedOutputStream(OutputStream) BufferedOutputStream(OutputStream, int size) </p>
+            <p><b>Reader</b> FileReader, BufferedReader, InputStreamReader</p>
+            <p><b>Writer</b> FileWriter, BufferedWriter, OutputStreamWriter, printWriter</p>
+            <p><b>Reader의 주요 메서드</b> </p>
+            <p><b>int skip(long n)</b> n개의 char스킵(스킵된 char 개수 리턴)</p>
+            <p><b>int read()</b> int의 하위 2byte에 읽은 데이터를 저장해 리턴</p>
+            <p><b>int read(char[] cbuf)</b> 읽은 데이터를 char[] cbuf에 저장하고 읽은 char 개수를 리턴</p>
+            <p><b>abstract int read(char[] cbuf, int off, int len)</b> len 개수만큼 읽은 데이터를 char[] cbuf의 off 위치부터 저장(추상 메서드)</p>
+            <p><b>abstract void close()</b> Reader의 자원 반환</p>
+            <p><b>Writer의 주요 메서드</b> </p>
+            <p><b>abstract void flush()</b> 메모리 버퍼에 저장된 데이터 내보내기(실제 출력) (추상 메서드)</p>
+            <p><b>void write(int c)</b> int의 하위 2byte를 메모리 버퍼에 출력</p>
+            <p><b>void write(char[] cbuf)</b> 매개변수로 넘겨진 char[] cbuf 데이터를 메모리 버퍼에 출력</p>
+            <p><b>void write(String str)</b> 매개변수로 넘겨진 String 값을 메모리 버퍼에 출력</p>
+            <p><b>void write(String str, int off, int len)</b> str의 off위치에서부터 len개수를 읽어 메모리 버퍼에 출력</p>
+            <p><b>abstract void write(char[] cbuf, int off, int len)</b> char[]의 off위치에서부터 len 개수를 읽어 출력(추상 메서드)</p>
+            <p><b>abstract void close()</b> Writer의 자원 반환(추상 메서드)</p>
+            <p><b>FileReader</b> FileReader(File) FileReader(String)</p>
+            <p><b>FileWriter</b> FileWriter(File) FileWriter(File, boolean append) FileWriter(String) FileWriter(String, boolean append)
+            <br>*append가 true일때 이어쓰기, false일때 덮어쓰기 </p>
+            <p><b>BufferedReader</b> BufferedReader(Reader) BufferedReader(Reader, int size)
+            <br>*readLine() 1줄씩 읽어 문자열로 리턴하는 메서드, == null 이면 파일의 끝을 의미.</p>
+            <p><b>BufferedWriter</b> BufferedWriter(Writer) BufferedWriter(Writer, int size) </p>
+            <p><b>InputStreamReader</b> byte단위를 char단위로 변경
+            <br>InputStreamReader(InputStream), InputStreamReader(InputStream, Charset cs), InputStreamReader(InputStream, String charsetName)</p>
+            <p><b>OutputStreamWriter</b> byte단위를 char단위로 변경
+            <br>OutputStreamWriter(OutputStream), OutputStreamWriter(OutputStream, Charset cs), OutputStreamWriter(OutputStream, String charsetName)</p>
+
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

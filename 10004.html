@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>5. 다양한 태그 알아보기 3</h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>다양한 태그 알아보기 3 </b></h2>
+            <p><b>&lttable&gt</b>는 표를 나타냅니다.
+            <p><b>&ltcaption&gt</b>는 표의 제목을 넣습니다.
+            <p><b>&lttr&gt</b>는 표의 행을 만듭니다.
+            <p><b>&lttd&gt</b>는 표의 셀을 만듭니다.
+            <p><b>&ltth&gt</b>는 제목 셀을 만듭니다.
+            <p><b>&ltthead&gt</b>는 표 구조에서 제목 부분을 나타냅니다.
+            <p><b>&lttbody&gt</b>는 표 구조에서 본문 부분을 나타냅니다.
+            <p><b>&lttfoot&gt</b>는 표 구조에서 아래 부분을 나타냅니다.
+            <p><b>&ltcol&gt</b>는 표에서 열의 스타일을 지정합니다.
+            <p><b>&ltcolgroup&gt</b>는 표에서 여러 열을 묶어서 스타일을 지정합니다.
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>

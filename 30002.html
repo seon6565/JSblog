@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <link rel="stylesheet" href="css/postDetail.css">
+    <style>
+        
+        #header{
+            background: url("img/posts.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>  
+        <div id="headerText">
+            <h2>3. JavaScript 함수 </h2>
+            <p></p>
+        </div>
+        </div>
+    <div id="main">
+        <div class="article">
+            <h2><b>JavaScript 함수</b></h2>
+            <p><b>var</b> 호이스팅이 가능함, 재할당 O 재선언 O</p>
+            <p><b>let</b> 재할당 O 재선언 X</p>
+            <p><b>const</b> 재할당 X 재선언 X</p>
+            <p><b>function</b> function 함수명() { 실행 }</p>
+            <p><b>익명 함수</b> function(매개변수) { 실행 }</p>
+            <p><b>화살표 함수</b> (매개변수) => { 실행 }</p>
+            <p><b>즉시 실행 함수</b> ( function() { 실행 }() );, ( function(매개변수){ 실행 }(인수) );</p>
+        </div>
+        <hr>
+        <div id="buttonArea">
+            <div id="left">
+                <button onclick="openPage(-1)" >Previous Post</button>
+            </div>
+            <div id="right">
+                <button onclick="openPage(1)" >Next Post→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>
