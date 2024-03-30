@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/headerNav.js"></script>
+    <script src="js/footerNav.js"></script>
+    <script src="js/etc.js"></script>
+    <style>
+        #header{
+            background: url("img/rd0.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        #asideLeft{
+            border-right: 1px solid black;
+        }
+        #main{
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            margin: 0px auto;
+            width: 1200px;
+        }
+        .section a, .aside a{
+            color: black;
+        }
+
+        .section, .aside{
+            padding: 20px;
+        }
+        button{
+            padding: 10px;
+        }
+        .section{
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            padding: 20px;
+            line-height: 27px;
+            border-bottom: 1px solid black;
+        }
+        .Studylist{
+            padding-left: 5px;
+        }
+        .postImage{
+            max-width: 200px;
+            min-height: 135px;
+            z-index: 10;
+            display: block;
+        }
+        .postImage1, .postImage2, .postImage3, .postImage4{
+            z-index: 4;
+            max-width: 200px;
+            min-height: 135px;
+            position: absolute;
+            display: none;
+        }
+        button{
+            margin-left: 10px;
+            margin-top: 10px;
+            padding: 5px;
+            border-radius: 20px;
+        }
+        #buttonArea{
+            margin-bottom: 10px;
+        }
+        img{
+            border-radius: 10px;
+        }
+        #cssMenuUl,#jsMenuUl,#webMenuUl,#javaMenuUl,#mariaDBMenuUl,#JSPMenuUl{
+            display: none;
+        }
+        ruby{
+            font-size: 13px;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <script>headerNav();</script>    
+            <div id="headerText">
+                <h2>JS's Study Blog</h2>
+                <p></p>
+            </div>
+        </div>
+        <div id="main">  
+            <div class="aside" id=asideLeft>
+                <div id="studyHtmlMenu"><h2>HTML <ruby>▼<rt>Click</rt></ruby></h2> </div>
+                <ul id="htmlMenuUl"> 
+                    <li class="Studylist" ><p><a href="10000.html">1장</a></p></li>
+                    <li class="Studylist" ><p><a href="10001.html">2장</a></p></li>
+                    <li class="Studylist" ><p><a href="10002.html">3장</a></p></li>
+                    <li class="Studylist" ><p><a href="10003.html">4장</a></p></li>
+                    <li class="Studylist" ><p><a href="10004.html">5장</a></p></li>
+                    <li class="Studylist" ><p><a href="10005.html">6장</a></p></li>
+                    <li class="Studylist" ><p><a href="10006.html">7장</a></p></li>
+                    <li class="Studylist" ><p><a href="10007.html">8장</a></p></li>
+                    <li class="Studylist" ><p><a href="10008.html">9장</a></p></li>
+                </ul>
+                <div id="studyCssMenu"><h2>CSS <ruby>▼<rt>Click</rt></ruby></h2></div>
+                <ul id="cssMenuUl">
+                    <li class="Studylist" ><p><a href="20000.html">1장</a></p></li>
+                    <li class="Studylist" ><p><a href="20001.html">2장</a></p></li>
+                    <li class="Studylist" ><p><a href="20002.html">3장</a></p></li>
+                    <li class="Studylist" ><p><a href="20003.html">4장</a></p></li>
+                    <li class="Studylist" ><p><a href="20004.html">5장</a></p></li>
+                    <li class="Studylist" ><p><a href="20005.html">6장</a></p></li>
+                    <li class="Studylist" ><p><a href="20006.html">7장</a></p></li>
+                    <li class="Studylist" ><p><a href="20007.html">8장</a></p></li>
+                </ul>
+                <div id="studyJsMenu"><h2>JavaScript <ruby>▼<rt>Click</rt></ruby></h2></div>
+                <ul id="jsMenuUl">
+                    <li class="Studylist" ><p><a href="30000.html">1장</a></p></li>
+                    <li class="Studylist" ><p><a href="30001.html">2장</a></p></li>
+                    <li class="Studylist" ><p><a href="30002.html">3장</a></p></li>
+                    <li class="Studylist" ><p><a href="30003.html">4장</a></p></li>
+                    <li class="Studylist" ><p><a href="30004.html">5장</a></p></li>
+                </ul>
+                <div id="studyWebMenu"><h2>Web <ruby>▼<rt>Click</rt></ruby></h2></div>
+                <ul id="webMenuUl">
+                    <li class="Studylist" ><p><a href="40000.html">1장</a></p></li>
+                    <li class="Studylist" ><p><a href="40001.html">2장</a></p></li>
+                    <li class="Studylist" ><p><a href="40002.html">3장</a></p></li>
+                </ul>
+                <div id="studyjavaMenu"><h2>Java <ruby>▼<rt>Click</rt></ruby></h2> </div>
+                <ul id="javaMenuUl">
+                    <li class="Studylist" ><p><a href="50000.html">1장</a></p></li>
+                    <li class="Studylist" ><p><a href="50001.html">2장</a></p></li>
+                    <li class="Studylist" ><p><a href="50002.html">3장</a></p></li>
+                    <li class="Studylist" ><p><a href="50003.html">4장</a></p></li>
+                    <li class="Studylist" ><p><a href="50004.html">5장</a></p></li>
+                    <li class="Studylist" ><p><a href="50005.html">6장</a></p></li>
+                    <li class="Studylist" ><p><a href="50006.html">7장</a></p></li>
+                    <li class="Studylist" ><p><a href="50007.html">8장</a></p></li>
+                    <li class="Studylist" ><p><a href="50008.html">9장</a></p></li>
+                    <li class="Studylist" ><p><a href="50009.html">10장</a></p></li>
+                    <li class="Studylist" ><p><a href="50010.html">11장</a></p></li>
+                    <li class="Studylist" ><p><a href="50011.html">12장</a></p></li>
+                    <li class="Studylist" ><p><a href="50012.html">13장</a></p></li>
+                    <li class="Studylist" ><p><a href="50013.html">14장</a></p></li>
+                    <li class="Studylist" ><p><a href="50014.html">15장</a></p></li>
+                </ul>
+                <div id="studyMariaDBMenu"><h2>MariaDB <ruby>▼<rt>Click</rt></ruby></h2></div>
+                <ul id="mariaDBMenuUl">
+                    <li class="Studylist" ><p><a href="60000.html">1장</a></p></li>
+                    <li class="Studylist" ><p><a href="60001.html">2장</a></p></li>
+                    <li class="Studylist" ><p><a href="60002.html">3장</a></p></li>
+                    <li class="Studylist" ><p><a href="60003.html">4장</a></p></li>
+                    <li class="Studylist" ><p><a href="60004.html">5장</a></p></li>
+                    <li class="Studylist" ><p><a href="60005.html">6장</a></p></li>
+                    <li class="Studylist" ><p><a href="60006.html">7장</a></p></li>
+                    <li class="Studylist" ><p><a href="60007.html">8장</a></p></li>
+                    <li class="Studylist" ><p><a href="60008.html">9장</a></p></li>
+                    <li class="Studylist" ><p><a href="60009.html">10장</a></p></li>
+                    <li class="Studylist" ><p><a href="60010.html">11장</a></p></li>
+                    <li class="Studylist" ><p><a href="60011.html">12장</a></p></li>
+                    <li class="Studylist" ><p><a href="60012.html">13장</a></p></li>
+                </ul>
+                <div id="studyJSPMenu"><h2>JSP <ruby>▼<rt>Click</rt></ruby></h2></div>
+                <ul id="JSPMenuUl">
+                    <li class="Studylist" ><p><a href="70000.html">1장</a></p></li>
+                    <li class="Studylist" ><p><a href="70001.html">2장</a></p></li>
+                    <li class="Studylist" ><p><a href="70002.html">3장</a></p></li>
+                    <li class="Studylist" ><p><a href="70003.html">4장</a></p></li>
+                    <li class="Studylist" ><p><a href="70004.html">5장</a></p></li>
+                    <li class="Studylist" ><p><a href="70005.html">6장</a></p></li>
+                    <li class="Studylist" ><p><a href="70006.html">7장</a></p></li>
+                    <li class="Studylist" ><p><a href="70007.html">8장</a></p></li>
+                    <li class="Studylist" ><p><a href="70008.html">9장</a></p></li>
+                    <li class="Studylist" ><p><a href="70009.html">10장</a></p></li>
+                </ul>
+            </div>
+            <div id="center">
+            <div class="section" id="section1" draggable="true">
+                <div class="article" id="article1">
+                    <div class = "imgSlideList">
+                        <img src="img/art1/1.jpg" class="postImage" id="postImage11">
+                        <img src="img/art1/2.jpg" class="postImage1" id="postImage12">
+                        <img src="img/art1/3.jpg" class="postImage1" id="postImage13">
+                        <img src="img/art1/4.jpg" class="postImage1" id="postImage14">
+                        <img src="img/art1/5.jpg" class="postImage1" id="postImage15">
+                    </div>
+                </div>
+                <div id="textArea0">
+                    <h2><a href="10000.html" target="_self"><b id="a0Title">HTML에 대해서 알아보자.</b></a></h2>
+                    <p id="a0Content"><b>HTML(HyperText Markup Language)</b>는 웹 문서를 만드는 기본 언어입니다.<br>
+                    <b>HTML</b>는 웹 브라우저 창에 웹 문서의 내용을 보여주는데 필요한 약속이라고 할수 있으며<br>
+                        제목,본문,이미지,표와 같은 웹 요소를 알려주는 역할을 합니다.</p>
+                </div>
+            </div>
+            <div class="section" id="section2">  
+                <div class="article" id="article2">
+                    <div class = "imgSlideList">
+                        <img src="img/art2/1.jpg" class="postImage" id="postImage21">
+                        <img src="img/art2/2.jpg" class="postImage2" id="postImage22"  >
+                        <img src="img/art2/3.jpg" class="postImage2" id="postImage23" >
+                        <img src="img/art2/4.jpg" class="postImage2" id="postImage24" >
+                        <img src="img/art2/5.jpg" class="postImage2" id="postImage25" >
+                    </div>
+                </div>
+                <div id="textArea1">
+                    <h2><a href="20000.html" target="_self"><b id="a1Title">CSS에 대해서 알아보자.</b></a></h2>
+                    <p id="a1Content"><b>CSS(Cascading Style Sheets)</b>는 HTML로 만든 내용을 사용자가 알아보기 쉽게 꾸미거나 <br>
+                        사용하기 편리하도록 배치할때 사용합니다. 규격이 정해진 PC나 모바일 화면 등에서는 <br>
+                        <b>CSS</b>를 이용해서 웹 요소를 적절하게 배치하고 필요한 곳을 강조할 수 있습니다.
+                    </p>
+                </div>
+            </div>
+            <div class="section" id="section3">     
+                <div class="article" id="article3">
+                    <div class = "imgSlideList">
+                        <img src="img/art3/1.jpg" class="postImage" id="postImage31" >
+                        <img src="img/art3/2.jpg" class="postImage3" id="postImage32">
+                        <img src="img/art3/3.jpg" class="postImage3" id="postImage33">
+                        <img src="img/art3/4.jpg" class="postImage3" id="postImage34">
+                        <img src="img/art3/5.jpg" class="postImage3" id="postImage35">
+                    </div>
+                </div>
+                <div id="textArea2">
+                    <h2><a href="30000.html" target="_self"><b id="a2Title">JavaScript에 대해서 알아보자.</b></a></h2>
+                    <p id="a2Content"><b>JavaScript</b>는 사용자의 동작에 반응해서 동적인 효과를 주기 위해서 사용합니다.
+                    <br><b>JavaScript</b>를 추가하면 웹 문서의 각 요소를 가져와서 필요에 따라 스타일을 변경하거나 움직이게 할 수 있습니다.
+                    </p>
+                </div>
+            </div>
+            <div class="section" id="section4"> 
+                <div class="article" id="article4">
+                    <div class = "imgSlideList">
+                        <img src="img/art4/1.jpg" class="postImage" id="postImage41" >
+                        <img src="img/art4/2.jpg" class="postImage4" id="postImage42">
+                        <img src="img/art4/3.jpg" class="postImage4" id="postImage43">
+                        <img src="img/art4/4.jpg" class="postImage4" id="postImage44">
+                        <img src="img/art4/5.jpg" class="postImage4" id="postImage45">
+                    </div>
+                </div>
+                <div id="textArea3">
+                    <h2><a href="40000.html" target="_self"><b id="a3Title">웹페이지에 대해서 알아보자.</b></a></h2>
+                    <p id="a3Content"> 방문자에게 정보만 보여주는 사이트를 <b>정적사이트(Static site)</b>라고 합니다.<br>
+                        단순히 정보만 보여주는 것이 아니라 사용자의 행동에 반응하여 <br>
+                        웹사이트가 동적으로 움직이는 사이트를 <b>동적 사이트(dynamic site)</b>라고 합니다.
+                    </p>
+                </div>
+            </div> 
+            <div id="buttonArea">
+                <button onclick="openUrl('posts.html')" >View All Posts</button>
+                <button onclick="openUrl('createPost.html')" >Create Posts</button>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <script>footerNav();</script>
+    </div>
+    </div>
+</body>
+</html>
+<script>
+    let menuHide = document.querySelector("#studyHtmlMenu");
+    let menuHide2 = document.querySelector("#studyCssMenu");
+    let menuHide3 = document.querySelector("#studyJsMenu");
+    let menuHide4 = document.querySelector("#studyWebMenu");
+    let menuHide5 = document.querySelector("#studyjavaMenu");
+    let menuHide6 = document.querySelector("#studyMariaDBMenu");
+    let menuHide7 = document.querySelector("#studyJSPMenu");
+    let menuUl = document.querySelector("#htmlMenuUl");
+    let menuUl2 = document.querySelector("#cssMenuUl");
+    let menuUl3 = document.querySelector("#jsMenuUl");
+    let menuUl4 = document.querySelector("#webMenuUl");
+    let menuUl5 = document.querySelector("#javaMenuUl");
+    let menuUl6 = document.querySelector("#mariaDBMenuUl");
+    let menuUl7 = document.querySelector("#JSPMenuUl");
+    menuHide.addEventListener("click",()=>{(menuUl.style.display=='block')? menuUl.style.display='none': menuUl.style.display='block';});
+    menuHide2.addEventListener("click",()=>{(menuUl2.style.display=='block')? menuUl2.style.display='none': menuUl2.style.display='block';});
+    menuHide3.addEventListener("click",()=>{(menuUl3.style.display=='block')? menuUl3.style.display='none': menuUl3.style.display='block';});
+    menuHide4.addEventListener("click",()=>{(menuUl4.style.display=='block')? menuUl4.style.display='none': menuUl4.style.display='block';});
+    menuHide5.addEventListener("click",()=>{(menuUl5.style.display=='block')? menuUl5.style.display='none': menuUl5.style.display='block';});
+    menuHide6.addEventListener("click",()=>{(menuUl6.style.display=='block')? menuUl6.style.display='none': menuUl6.style.display='block';});
+    menuHide7.addEventListener("click",()=>{(menuUl7.style.display=='block')? menuUl7.style.display='none': menuUl7.style.display='block';});
+
+    let postImage1= document.querySelector("#postImage11");
+    let postImage2= document.querySelector("#postImage21");   
+    let postImage3= document.querySelector("#postImage31");   
+    let postImage4= document.querySelector("#postImage41");   
+    let postImageList1 = [document.querySelector("#postImage12"),document.querySelector("#postImage13"),document.querySelector("#postImage14"),document.querySelector("#postImage15")];
+    let postImageList2 = [document.querySelector("#postImage22"),document.querySelector("#postImage23"),document.querySelector("#postImage24"),document.querySelector("#postImage25")];
+    let postImageList3 = [document.querySelector("#postImage32"),document.querySelector("#postImage33"),document.querySelector("#postImage34"),document.querySelector("#postImage35")];
+    let postImageList4 = [document.querySelector("#postImage42"),document.querySelector("#postImage43"),document.querySelector("#postImage44"),document.querySelector("#postImage45")];
+    let trans = 200;
+    postImage1.addEventListener("mouseover",()=>{displaySlideOn(postImageList1)});
+    postImage1.addEventListener("mouseout",()=>{displaySlideOff(postImageList1)});
+    postImage2.addEventListener("mouseover",()=>{displaySlideOn(postImageList2)});
+    postImage2.addEventListener("mouseout",()=>{displaySlideOff(postImageList2)});
+    postImage3.addEventListener("mouseover",()=>{displaySlideOn(postImageList3)});
+    postImage3.addEventListener("mouseout",()=>{displaySlideOff(postImageList3)});
+    postImage4.addEventListener("mouseover",()=>{displaySlideOn(postImageList4)});
+    postImage4.addEventListener("mouseout",()=>{displaySlideOff(postImageList4)});
+</script>
+
+<script>
+    let randomImg=document.getElementById("header");
+    randomImg.addEventListener("mouseover",()=>{
+        let i = (Math.floor(Math.random()*100))%5;
+        randomImg.style.backgroundImage='url("img/rd'+i+'.jpg")';
+    })
+</script>
